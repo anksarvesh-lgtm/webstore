@@ -41,41 +41,11 @@
   let updateIndicatorEl = null;
 
   function createOrGetIndicator() {
-    if (updateIndicatorEl) return updateIndicatorEl;
-
-    // Look for product banner or navigation to attach live sync badge
-    const banner = document.querySelector('.product-banner-inner') || document.querySelector('.nav-inner');
-    if (!banner) return null;
-
-    let el = document.getElementById('live-release-indicator');
-    if (!el) {
-      el = document.createElement('div');
-      el.id = 'live-release-indicator';
-      el.className = 'live-release-indicator';
-      el.innerHTML = `
-        <span class="live-dot" id="live-dot" aria-hidden="true"></span>
-        <span class="live-text" id="live-text">Auto-Syncing GitHub Releases</span>
-      `;
-      // Insert into banner
-      banner.appendChild(el);
-    }
-    updateIndicatorEl = el;
-    return updateIndicatorEl;
+    return null;
   }
 
   function setIndicatorStatus(status, text) {
-    const el = createOrGetIndicator();
-    if (!el) return;
-
-    const dot = el.querySelector('#live-dot');
-    const label = el.querySelector('#live-text');
-
-    if (dot) {
-      dot.className = `live-dot live-dot--${status}`;
-    }
-    if (label) {
-      label.textContent = text;
-    }
+    // Top banner indicator removed
   }
 
   // 1. Fetch from server API endpoint (which handles caching and no rate limits)
