@@ -1,25 +1,101 @@
 /**
- * GitHub Releases Dynamic Linker & 1-Click Direct Downloader
- * Connects web CTA buttons to latest GitHub assets with instantaneous fallback
+ * GitHub Releases Auto-Fetch Engine & 1-Click Direct Downloader
+ * Automatically polls and synchronizes latest releases so users always get the freshest build.
  */
 
 (function () {
   const CONFIG = {
+    pollIntervalMs: 30000, // Auto-check every 30 seconds
     dynamo: {
       repo: 'anksarvesh-lgtm/dynamo-mac',
       fallbackVersion: '2.1.9',
       fallbackDmg: 'https://github.com/anksarvesh-lgtm/dynamo-mac/releases/download/v2.1.9/LiquidDynamo-2.1.9.dmg',
-      releasesUrl: 'https://github.com/anksarvesh-lgtm/dynamo-mac/releases/latest'
+      releasesUrl: 'https://github.com/anksarvesh-lgtm/dynamo-mac/releases/latest',
+      directDownloadUrl: '/download/dynamo'
     },
     guard: {
       repo: 'anksarvesh-lgtm/agent-guard',
-      fallbackVersion: '0.2.18',
+      fallbackVersion: '0.2.21',
       fallbackInstall: 'curl -fsSL https://raw.githubusercontent.com/anksarvesh-lgtm/agent-guard/main/install.sh | bash',
-      releasesUrl: 'https://github.com/anksarvesh-lgtm/agent-guard/releases/latest'
+      releasesUrl: 'https://github.com/anksarvesh-lgtm/agent-guard/releases/latest',
+      directDownloadUrl: '/download/guard'
     }
   };
 
-  async function resolveRelease(productKey) {
+  let activeReleases = {
+    dynamo: {
+      version: CONFIG.dynamo.fallbackVersion,
+      downloadUrl: CONFIG.dynamo.directDownloadUrl,
+      releasesUrl: CONFIG.dynamo.releasesUrl,
+      publishedAt: 'October 2026'
+    },
+    guard: {
+      version: CONFIG.guard.fallbackVersion,
+      downloadUrl: CONFIG.guard.directDownloadUrl,
+      releasesUrl: CONFIG.guard.releasesUrl,
+      publishedAt: 'October 2026'
+    }
+  };
+
+  let isFetching = false;
+  let updateIndicatorEl = null;
+
+  function createOrGetIndicator() {
+    if (updateIndicatorEl) return updateIndicatorEl;
+
+    // Look for product banner or navigation to attach live sync badge
+    const banner = document.querySelector('.product-banner-inner') || document.querySelector('.nav-inner');
+    if (!banner) return null;
+
+    let el = document.getElementById('live-release-indicator');
+    if (!el) {
+      el = document.createElement('div');
+      el.id = 'live-release-indicator';
+      el.className = 'live-release-indicator';
+      el.innerHTML = `
+        <span class="live-dot" id="live-dot" aria-hidden="true"></span>
+        <span class="live-text" id="live-text">Auto-Syncing GitHub Releases</span>
+      `;
+      // Insert into banner
+      banner.appendChild(el);
+    }
+    updateIndicatorEl = el;
+    return updateIndicatorEl;
+  }
+
+  function setIndicatorStatus(status, text) {
+    const el = createOrGetIndicator();
+    if (!el) return;
+
+    const dot = el.querySelector('#live-dot');
+    const label = el.querySelector('#live-text');
+
+    if (dot) {
+      dot.className = `live-dot live-dot--${status}`;
+    }
+    if (label) {
+      label.textContent = text;
+    }
+  }
+
+  // 1. Fetch from server API endpoint (which handles caching and no rate limits)
+  async function fetchServerReleases() {
+    try {
+      const res = await fetch('/api/latest-releases?t=' + Date.now(), { cache: 'no-store' });
+      if (!res.ok) throw new Error('Server API unavailable');
+      const data = await res.json();
+      if (data && data.status === 'ok') {
+        return {
+          dynamo: data.dynamo,
+          guard: data.guard
+        };
+      }
+    } catch (_) {}
+    return null;
+  }
+
+  // 2. Direct GitHub API fallback
+  async function fetchGitHubFallback(productKey) {
     const conf = CONFIG[productKey];
     if (!conf) return null;
 
@@ -29,40 +105,35 @@
       const data = await res.json();
       const version = String(data.tag_name || '').replace(/^v/i, '') || conf.fallbackVersion;
       
-      let downloadUrl = conf.fallbackDmg || conf.releasesUrl;
+      let downloadUrl = conf.directDownloadUrl || conf.fallbackDmg;
       if (data.assets && data.assets.length > 0) {
         const dmgAsset = data.assets.find(a => a.name.toLowerCase().endsWith('.dmg'));
         if (dmgAsset && dmgAsset.browser_download_url) {
           downloadUrl = dmgAsset.browser_download_url;
-        } else if (data.assets[0].browser_download_url) {
-          downloadUrl = data.assets[0].browser_download_url;
         }
       }
 
       return {
         version,
         downloadUrl,
-        publishedAt: data.published_at ? new Date(data.published_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : null,
-        body: data.body || null
+        publishedAt: data.published_at ? new Date(data.published_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : 'Latest Release'
       };
-    } catch (e) {
-      // Instant graceful fallback
-      return {
-        version: conf.fallbackVersion,
-        downloadUrl: conf.fallbackDmg || conf.releasesUrl,
-        publishedAt: 'Latest Release',
-        body: null
-      };
+    } catch (_) {
+      return null;
     }
   }
 
   function applyToDOM(productKey, release) {
     if (!release) return;
 
+    const oldVersion = activeReleases[productKey] ? activeReleases[productKey].version : null;
+    activeReleases[productKey] = release;
+
     // Update download buttons
     const downloadBtns = document.querySelectorAll(`[data-gh-download="${productKey}"]`);
     downloadBtns.forEach(btn => {
-      btn.setAttribute('href', release.downloadUrl);
+      // Use direct local auto-redirect endpoint or resolved release download URL
+      btn.setAttribute('href', release.downloadUrl || (productKey === 'dynamo' ? '/download/dynamo' : '/download/guard'));
       btn.setAttribute('download', '');
     });
 
@@ -71,6 +142,10 @@
     versionLabels.forEach(el => {
       el.textContent = `v${release.version}`;
       el.removeAttribute('hidden');
+      if (oldVersion && oldVersion !== release.version) {
+        el.classList.add('version-updated-pulse');
+        setTimeout(() => el.classList.remove('version-updated-pulse'), 1800);
+      }
     });
 
     // Update release date labels
@@ -82,27 +157,69 @@
     }
   }
 
-  document.addEventListener('DOMContentLoaded', async () => {
-    // 1. Instantly apply known release info for zero layout shift
-    applyToDOM('dynamo', {
-      version: CONFIG.dynamo.fallbackVersion,
-      downloadUrl: CONFIG.dynamo.fallbackDmg,
-      publishedAt: 'October 2026'
+  async function performAutoFetch() {
+    if (isFetching) return;
+    isFetching = true;
+    setIndicatorStatus('checking', 'Checking for updates...');
+
+    try {
+      // Step 1: Query server-side release API
+      const serverData = await fetchServerReleases();
+      if (serverData) {
+        if (serverData.dynamo) applyToDOM('dynamo', serverData.dynamo);
+        if (serverData.guard) applyToDOM('guard', serverData.guard);
+        
+        const currentProduct = window.location.pathname.includes('agent-guard') ? 'guard' : 'dynamo';
+        const currentVer = activeReleases[currentProduct].version;
+        setIndicatorStatus('active', `Auto-Sync Live · v${currentVer}`);
+        return;
+      }
+
+      // Step 2: Fallback to direct GitHub query
+      const [dynamoRel, guardRel] = await Promise.all([
+        fetchGitHubFallback('dynamo'),
+        fetchGitHubFallback('guard')
+      ]);
+
+      if (dynamoRel) applyToDOM('dynamo', dynamoRel);
+      if (guardRel) applyToDOM('guard', guardRel);
+
+      const currentProduct = window.location.pathname.includes('agent-guard') ? 'guard' : 'dynamo';
+      setIndicatorStatus('active', `Live v${activeReleases[currentProduct].version}`);
+    } catch (e) {
+      setIndicatorStatus('active', 'Auto-Sync Active');
+    } finally {
+      isFetching = false;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Initial immediate DOM population (zero layout shift)
+    applyToDOM('dynamo', activeReleases.dynamo);
+    applyToDOM('guard', activeReleases.guard);
+    createOrGetIndicator();
+
+    // 2. Fetch latest updates immediately
+    performAutoFetch();
+
+    // 3. Auto-poll periodically in background (30s)
+    setInterval(performAutoFetch, CONFIG.pollIntervalMs);
+
+    // 4. Auto-refresh when user returns to tab
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') {
+        performAutoFetch();
+      }
     });
 
-    applyToDOM('guard', {
-      version: CONFIG.guard.fallbackVersion,
-      downloadUrl: CONFIG.guard.releasesUrl,
-      publishedAt: 'October 2026'
+    window.addEventListener('focus', () => {
+      performAutoFetch();
     });
-
-    // 2. Query GitHub in background for real-time updates
-    const [dynamoRel, guardRel] = await Promise.all([
-      resolveRelease('dynamo'),
-      resolveRelease('guard')
-    ]);
-
-    if (dynamoRel) applyToDOM('dynamo', dynamoRel);
-    if (guardRel) applyToDOM('guard', guardRel);
   });
+
+  // Expose global controller for manual checks or debugging
+  window.AutoReleaseSync = {
+    checkNow: performAutoFetch,
+    getReleases: () => activeReleases
+  };
 })();

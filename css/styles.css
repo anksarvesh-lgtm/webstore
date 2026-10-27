@@ -243,3 +243,68 @@ html, body {
   border-radius: 999px;
   padding: 3px 9px;
 }
+
+/* Live Auto-Sync Status Badge */
+.live-release-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(16, 117, 105, 0.08);
+  border: 1px solid rgba(16, 117, 105, 0.2);
+  border-radius: 999px;
+  padding: 4px 11px;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #107569;
+  margin-left: auto;
+  transition: all 0.25s ease;
+}
+
+.live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.live-dot--active {
+  background: #10b981;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
+  animation: live-pulse 2s infinite;
+}
+
+.live-dot--checking {
+  background: #f59e0b;
+  animation: live-blink 0.8s infinite alternate;
+}
+
+@keyframes live-pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+@keyframes live-blink {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+.version-updated-pulse {
+  animation: version-glow 1.5s ease-out;
+}
+
+@keyframes version-glow {
+  0% { color: #0073eb; text-shadow: 0 0 8px rgba(0, 115, 235, 0.6); }
+  100% { color: inherit; text-shadow: none; }
+}
+
