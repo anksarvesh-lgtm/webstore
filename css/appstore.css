@@ -225,6 +225,10 @@
   color: #b45309;
 }
 
+.spotlight-card[data-app-url] {
+  cursor: pointer;
+}
+
 .spotlight-title {
   font-size: 1.45rem;
   font-weight: 800;
@@ -232,6 +236,16 @@
   line-height: 1.2;
   margin-bottom: 6px;
   color: var(--ink);
+}
+
+.spotlight-title-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.spotlight-title-link:hover {
+  color: var(--store-blue);
 }
 
 .spotlight-desc {
@@ -426,10 +440,15 @@
   transition: all 0.18s ease;
 }
 
+.chart-item[data-app-url],
+.store-whats-new-card[data-app-url] {
+  cursor: pointer;
+}
+
 .chart-item:hover {
-  border-color: color-mix(in srgb, var(--store-border) 60%, var(--muted));
-  box-shadow: 0 4px 12px rgba(24, 27, 23, 0.06);
-  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--store-blue) 40%, var(--store-border));
+  box-shadow: 0 6px 16px rgba(24, 27, 23, 0.08);
+  transform: translateY(-2px);
 }
 
 .chart-rank {
@@ -464,6 +483,17 @@
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 2px;
+}
+
+.chart-title-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.chart-title-link:hover,
+.chart-item:hover .chart-title-link {
+  color: var(--store-blue);
 }
 
 .chart-category {
