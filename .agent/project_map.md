@@ -1,5 +1,5 @@
 # Project Map & Architecture: web
-Generated on: 2026-10-27T10:08:53.315Z | Total Tracked Files: 67
+Generated on: 2026-10-27T10:11:40.449Z | Total Tracked Files: 69
 
 ## Architecture Flowchart
 ```mermaid
@@ -24,6 +24,8 @@ graph TD
 │   ├── agrigence/ (6 files)
 │   ├── dynamo/ (2 files)
 │   └── fonts/ (7 files)
+├── LICENSE
+├── README.md
 ├── agent-guard.html
 ├── apple-touch-icon.png
 ├── dynamo.html

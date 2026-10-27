@@ -1,44 +1,44 @@
 {
   "version": 1,
-  "task_id": "t-20261027-7722",
-  "goal": "Create a comprehensive, production-grade README.md for the App Store by Agrigence repository and push to GitHub",
+  "task_id": "t-20261027-8347",
+  "goal": "Remove the top product-banner header and auto-sync indicator strip from index.html, dynamo.html, and agent-guard.html",
   "status": "active",
-  "created_at": "2026-10-27T10:09:00.404Z",
-  "updated_at": "2026-10-27T10:09:37.939Z",
-  "checkpoint_count": 1,
+  "created_at": "2026-10-27T10:11:46.686Z",
+  "updated_at": "2026-10-27T10:11:46.686Z",
+  "checkpoint_count": 0,
   "steps": [
     {
       "id": "s1",
-      "title": "Draft a comprehensive README.md detailing the App Store by Agrigence architecture, featured apps (LiquidDynamo & Agent Guard), auto-fetch release engine, local development instructions, and secur[cut]",
-      "status": "done",
+      "title": "Identify all occurrences of the top product-banner, product switcher pills, and top release indicator in index.html, dynamo.html, agent-guard.html, and js/github-releases.js",
+      "status": "in_progress",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [],
-      "note": "Completed Step s1: Drafted a comprehensive, production-grade README.md detailing the App Store by Agrigence storefront architecture, LiquidDynamo and Agent Guard applications, auto-fetch release engine, local development instructions, API routes table, and file structure.",
+      "note": null,
       "last_error": null,
-      "updated_at": "2026-10-27T10:09:37.939Z"
+      "updated_at": "2026-10-27T10:11:46.686Z"
     },
     {
       "id": "s2",
-      "title": "Verify README markdown formatting, internal links, commands, and repository metadata",
+      "title": "Remove the top product-banner markup from index.html, dynamo.html, and agent-guard.html so the clean macOS App Store navigation bar is the true top element",
       "status": "pending",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [],
       "note": null,
       "last_error": null,
-      "updated_at": "2026-10-27T10:09:00.404Z"
+      "updated_at": "2026-10-27T10:11:46.686Z"
     },
     {
       "id": "s3",
-      "title": "Commit README.md to git and push to GitHub repository webstore",
+      "title": "Update js/github-releases.js so it does not auto-insert an indicator into the removed banner, test the pages, commit to git, and push to GitHub repository webstore",
       "status": "pending",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [],
       "note": null,
       "last_error": null,
-      "updated_at": "2026-10-27T10:09:00.404Z"
+      "updated_at": "2026-10-27T10:11:46.686Z"
     }
   ]
 }

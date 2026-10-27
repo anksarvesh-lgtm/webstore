@@ -1,9 +1,9 @@
-<!-- BRIEF: COMMIT=eba17a58 HASH=5fdf4f86 DATE=2026-10-27T10:08:53.308Z -->
+<!-- BRIEF: COMMIT=51c13899 HASH=d6116fc4 DATE=2026-10-27T10:11:40.446Z -->
 # Project Brief: web
-- **Commit**: `eba17a58` | **Updated**: 2026-10-27T10:08:53.308Z | **Files Tracked**: 67
+- **Commit**: `51c13899` | **Updated**: 2026-10-27T10:11:40.446Z | **Files Tracked**: 69
 
 ## Overview
-No README.md found.
+App Store by Agrigence Premier macOS utilities, Dynamic Island enhancements, and autonomous developer tools.
 
 ## Tech Stack
 - Node.js / JavaScript/TypeScript (name: webstore)
@@ -24,6 +24,8 @@ No README.md found.
 │   ├── agrigence/ (6 files)
 │   ├── dynamo/ (2 files)
 │   └── fonts/ (7 files)
+├── LICENSE
+├── README.md
 ├── agent-guard.html
 ├── apple-touch-icon.png
 ├── dynamo.html
