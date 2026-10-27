@@ -1,6 +1,6 @@
-<!-- BRIEF: COMMIT=c9051538 HASH=a220bc37 DATE=2026-10-27T09:20:50.576Z -->
+<!-- BRIEF: COMMIT=bf5065c1 HASH=323e6092 DATE=2026-10-27T09:55:19.504Z -->
 # Project Brief: web
-- **Commit**: `c9051538` | **Updated**: 2026-10-27T09:20:50.576Z | **Files Tracked**: 53
+- **Commit**: `bf5065c1` | **Updated**: 2026-10-27T09:55:19.504Z | **Files Tracked**: 55
 
 ## Overview
 No README.md found.
@@ -15,9 +15,9 @@ No README.md found.
 ├── assets/ (8 files)
 │   ├── agent-guard/ (6 files)
 │   └── dynamo/ (2 files)
-├── css/ (3 files)
+├── css/ (4 files)
 ├── fonts/ (7 files)
-├── js/ (3 files)
+├── js/ (4 files)
 ├── public/ (18 files)
 │   ├── agent-guard/ (6 files)
 │   ├── dynamo/ (2 files)

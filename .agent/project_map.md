@@ -1,5 +1,5 @@
 # Project Map & Architecture: web
-Generated on: 2026-10-27T09:20:50.577Z | Total Tracked Files: 53
+Generated on: 2026-10-27T09:55:19.505Z | Total Tracked Files: 55
 
 ## Architecture Flowchart
 ```mermaid
@@ -15,9 +15,9 @@ graph TD
 ├── assets/ (8 files)
 │   ├── agent-guard/ (6 files)
 │   └── dynamo/ (2 files)
-├── css/ (3 files)
+├── css/ (4 files)
 ├── fonts/ (7 files)
-├── js/ (3 files)
+├── js/ (4 files)
 ├── public/ (18 files)
 │   ├── agent-guard/ (6 files)
 │   ├── dynamo/ (2 files)
