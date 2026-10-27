@@ -1,48 +1,61 @@
 {
   "version": 1,
-  "task_id": "t-20261027-9992",
-  "goal": "Run the web application server and open the web pages for the user in the browser",
-  "status": "done",
-  "created_at": "2026-10-27T08:27:45.136Z",
-  "updated_at": "2026-10-27T08:29:14.060Z",
-  "checkpoint_count": 3,
+  "task_id": "t-20261027-9732",
+  "goal": "Remove all Purge Mac files, assets, and references, establishing LiquidDynamo and Agent Guard as the dedicated web hub",
+  "status": "active",
+  "created_at": "2026-10-27T08:30:54.393Z",
+  "updated_at": "2026-10-27T08:31:10.057Z",
+  "checkpoint_count": 1,
   "steps": [
     {
       "id": "s1",
-      "title": "Check active HTTP server status on port 3838 and port 3000",
+      "title": "Delete Purge-specific files, videos, analysis chunks, and logos",
       "status": "done",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [],
-      "note": "Checked active server status: Node HTTP daemon is actively listening on port 3838 (PID 8017) and returning HTTP 200 OK.",
+      "note": "Deleted all Purge Mac static files (logos, demo videos, clears SVGs, latest-release.js, purge-analytics.js, and src-analysis).",
       "last_error": null,
-      "updated_at": "2026-10-27T08:28:06.427Z"
+      "updated_at": "2026-10-27T08:31:10.057Z"
     },
     {
       "id": "s2",
-      "title": "Ensure robust server process running with clean URL routing",
-      "status": "done",
+      "title": "Replace index.html with LiquidDynamo as the primary homepage",
+      "status": "pending",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [
         "s1"
       ],
-      "note": "Launched server on standard port 3000 (and port 3838) with clean URL routing for /dynamo, /agent-guard, and /. Both verified returning HTTP 200 OK.",
+      "note": null,
       "last_error": null,
-      "updated_at": "2026-10-27T08:28:49.938Z"
+      "updated_at": "2026-10-27T08:30:54.393Z"
     },
     {
       "id": "s3",
-      "title": "Open the web application in user's browser and verify HTTP responses",
-      "status": "done",
+      "title": "Update dynamo.html and agent-guard.html navigation to link between the two products",
+      "status": "pending",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [
         "s2"
       ],
-      "note": "Successfully opened http://localhost:3000/dynamo in user's default macOS browser with live 200 OK responses across all static assets and interactive controllers.",
+      "note": null,
       "last_error": null,
-      "updated_at": "2026-10-27T08:29:14.060Z"
+      "updated_at": "2026-10-27T08:30:54.393Z"
+    },
+    {
+      "id": "s4",
+      "title": "Update package.json metadata and verify clean HTTP responses on port 3000",
+      "status": "pending",
+      "tries": 0,
+      "max_tries": 3,
+      "depends_on": [
+        "s3"
+      ],
+      "note": null,
+      "last_error": null,
+      "updated_at": "2026-10-27T08:30:54.393Z"
     }
   ]
 }

@@ -9,28 +9,32 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/public/fonts/onest_latin_400_normal-s.p.2yx6zdq1s95vu.woff2') format('woff2');
+  src: url('../fonts/onest_latin_400_normal-s.p.2yx6zdq1s95vu.woff2') format('woff2'),
+       url('/fonts/onest_latin_400_normal-s.p.2yx6zdq1s95vu.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Onest';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url('/public/fonts/onest_latin_500_normal-s.p.3x1qmk_q32f0q.woff2') format('woff2');
+  src: url('../fonts/onest_latin_500_normal-s.p.3x1qmk_q32f0q.woff2') format('woff2'),
+       url('/fonts/onest_latin_500_normal-s.p.3x1qmk_q32f0q.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Onest';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url('/public/fonts/onest_latin_600_normal-s.p.07aacl82r0ues.woff2') format('woff2');
+  src: url('../fonts/onest_latin_600_normal-s.p.07aacl82r0ues.woff2') format('woff2'),
+       url('/fonts/onest_latin_600_normal-s.p.07aacl82r0ues.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Onest';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('/public/fonts/onest_latin_700_normal-s.p.0oo-5093ln8to.woff2') format('woff2');
+  src: url('../fonts/onest_latin_700_normal-s.p.0oo-5093ln8to.woff2') format('woff2'),
+       url('/fonts/onest_latin_700_normal-s.p.0oo-5093ln8to.woff2') format('woff2');
 }
 
 @font-face {
@@ -38,21 +42,24 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/public/fonts/jetbrains_mono_latin_400_normal-s.p.3crsbyy6lh6yf.woff2') format('woff2');
+  src: url('../fonts/jetbrains_mono_latin_400_normal-s.p.3crsbyy6lh6yf.woff2') format('woff2'),
+       url('/fonts/jetbrains_mono_latin_400_normal-s.p.3crsbyy6lh6yf.woff2') format('woff2');
 }
 @font-face {
   font-family: 'JetBrains Mono';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url('/public/fonts/jetbrains_mono_latin_500_normal-s.p.2h52d08o60qht.woff2') format('woff2');
+  src: url('../fonts/jetbrains_mono_latin_500_normal-s.p.2h52d08o60qht.woff2') format('woff2'),
+       url('/fonts/jetbrains_mono_latin_500_normal-s.p.2h52d08o60qht.woff2') format('woff2');
 }
 @font-face {
   font-family: 'JetBrains Mono';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url('/public/fonts/jetbrains_mono_latin_600_normal-s.p.2mm922pe315l1.woff2') format('woff2');
+  src: url('../fonts/jetbrains_mono_latin_600_normal-s.p.2mm922pe315l1.woff2') format('woff2'),
+       url('/fonts/jetbrains_mono_latin_600_normal-s.p.2mm922pe315l1.woff2') format('woff2');
 }
 
 :root {
