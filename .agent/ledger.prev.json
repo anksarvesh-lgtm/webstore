@@ -1,78 +1,78 @@
 {
   "version": 1,
-  "task_id": "t-20261027-6112",
-  "goal": "Reverse-engineer purgemac.com frontend and backend assets/behaviors and build an exact high-fidelity replica webpage in the workspace",
+  "task_id": "t-20261027-2757",
+  "goal": "Build high-fidelity landing pages in the purgemac.com design aesthetic for LiquidDynamo and Agent Guard",
   "status": "active",
-  "created_at": "2026-10-27T08:05:29.080Z",
-  "updated_at": "2026-10-27T08:14:38.028Z",
-  "checkpoint_count": 5,
+  "created_at": "2026-10-27T08:18:26.266Z",
+  "updated_at": "2026-10-27T08:18:26.266Z",
+  "checkpoint_count": 0,
   "steps": [
     {
       "id": "s1",
-      "title": "Fetch and inspect purgemac.com HTML, assets, scripts, and network resources",
-      "status": "done",
+      "title": "Inspect full feature sets, technical specs, and install commands for dynamo-mac and agent-guard",
+      "status": "in_progress",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [],
-      "note": "Successfully fetched and fully reverse-engineered purgemac.com HTML, CSS (2k1nqxb_rod0f.css), RSC stream, and client JS modules (14601 clears tab-slider, 89286 FAQ accordion, 19763 clipboard/stars/release loader, 4042 data constants).",
+      "note": null,
       "last_error": null,
-      "updated_at": "2026-10-27T08:09:06.660Z"
+      "updated_at": "2026-10-27T08:18:26.266Z"
     },
     {
       "id": "s2",
-      "title": "Download and organize all static assets, SVGs, and visual elements",
-      "status": "done",
+      "title": "Generate and prepare SVGs, brand assets, mockups, and visual components for both apps",
+      "status": "pending",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [
         "s1"
       ],
-      "note": "Downloaded all 14 primary static assets (logos, poster, 4.9MB MP4 video, clear SVGs, scripts) and all 7 local woff2 fonts (Onest and JetBrains Mono) into public/ directory.",
+      "note": null,
       "last_error": null,
-      "updated_at": "2026-10-27T08:10:37.486Z"
+      "updated_at": "2026-10-27T08:18:26.266Z"
     },
     {
       "id": "s3",
-      "title": "Construct semantic HTML structure matching purgemac.com page sections",
-      "status": "done",
+      "title": "Build LiquidDynamo landing page with interactive island preview and gesture controls",
+      "status": "pending",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [
         "s2"
       ],
-      "note": "Constructed complete semantic HTML in index.html (33KB) mirroring purgemac.com page structure, nav, hero with video demo, interactive clears tab list, trust cards with exact SVG masks, 10-item FAQ accordion, and footer.",
+      "note": null,
       "last_error": null,
-      "updated_at": "2026-10-27T08:13:18.794Z"
+      "updated_at": "2026-10-27T08:18:26.266Z"
     },
     {
       "id": "s4",
-      "title": "Implement exact styling, color schemes, gradients, and typography in CSS",
-      "status": "done",
+      "title": "Build Agent Guard landing page with DAG ledger showcase, skills catalog, and prompt copy",
+      "status": "pending",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [
         "s3"
       ],
-      "note": "Created css/styles.css (47.7KB) with exact design tokens (--paper, --surface, --accent, --ink, --line, --radius), local and web font-face declarations (Onest, JetBrains Mono), and complete responsive component styles.",
+      "note": null,
       "last_error": null,
-      "updated_at": "2026-10-27T08:13:47.821Z"
+      "updated_at": "2026-10-27T08:18:26.266Z"
     },
     {
       "id": "s5",
-      "title": "Implement interactive behaviors, animations, tabs, and client logic",
-      "status": "done",
+      "title": "Implement shared design system, navigation bar, interactive tabs, and copy mechanics",
+      "status": "pending",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [
         "s4"
       ],
-      "note": "Implemented js/main.js with full parity: GitHub stargazers API integration, terminal snippet one-click copy, interactive clears tab slider with animated progress fill and sliding indicator pill, FAQ accordion expand/collapse, and smooth anchor navigation.",
+      "note": null,
       "last_error": null,
-      "updated_at": "2026-10-27T08:14:38.028Z"
+      "updated_at": "2026-10-27T08:18:26.266Z"
     },
     {
       "id": "s6",
-      "title": "Validate replicated webpage in local dev server and test responsiveness",
+      "title": "Verify server routing, links, video/asset streaming, and mobile responsiveness",
       "status": "pending",
       "tries": 0,
       "max_tries": 3,
@@ -81,7 +81,7 @@
       ],
       "note": null,
       "last_error": null,
-      "updated_at": "2026-10-27T08:05:29.080Z"
+      "updated_at": "2026-10-27T08:18:26.266Z"
     }
   ]
 }

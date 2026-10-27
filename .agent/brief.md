@@ -1,17 +1,27 @@
-<!-- BRIEF: COMMIT=4436ea47 HASH=e0046ebe DATE=2026-10-27T08:05:21.822Z -->
+<!-- BRIEF: COMMIT=1003a6c8 HASH=71f534fe DATE=2026-10-27T08:18:06.611Z -->
 # Project Brief: web
-- **Commit**: `4436ea47` | **Updated**: 2026-10-27T08:05:21.822Z | **Files Tracked**: 5
+- **Commit**: `1003a6c8` | **Updated**: 2026-10-27T08:18:06.611Z | **Files Tracked**: 37
 
 ## Overview
 No README.md found.
 
 ## Tech Stack
-- Generic / Stack undetected
+- Node.js / JavaScript/TypeScript (name: purge-mac-replica)
 
 ## Project Map (Directory Tree)
 ```text
 .
-└── .agent/ (5 files)
+├── .agent/ (5 files)
+├── css/ (1 file)
+├── js/ (1 file)
+├── public/ (21 files)
+│   ├── clears/ (4 files)
+│   └── fonts/ (7 files)
+├── src-analysis/ (6 files)
+│   └── chunks/ (3 files)
+├── index.html
+├── package.json
+└── server.js
 ```
 
 ## Architecture Chart
@@ -22,7 +32,11 @@ graph TD
 ```
 
 ## Likely Entry Points
-- None identified
+- `index.html`
+- `js/main.js`
+- `server.js`
 
 ## Key Commands
-- No build/test scripts found
+- `npm run start`: `node server.js`
+- `npm run dev`: `node server.js`
+- `npm run test`: `node -e "const http = require('http'); const req = http.get('http://localhost:3000', res => { console.log('HTTP Status:', res.statusCode); process.exit(res.statusCode === 200 ? 0 : 1); }); req.on('error', err => { console.error(err); process.exit(1); });"`
