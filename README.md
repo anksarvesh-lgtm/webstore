@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="/assets/agrigence/logo-192.png" alt="App Store by Agrigence" width="96" height="96" style="border-radius: 22px; box-shadow: 0 8px 24px rgba(16, 117, 105, 0.35);" />
+  <img src="/assets/agrigence/logo-192.png" alt="App Store by Agrigence" width="96" height="96" style="border-radius: 22px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);" />
   <h1>App Store by Agrigence</h1>
   <p><strong>Premier macOS utilities, Dynamic Island enhancements, and autonomous developer tools.</strong></p>
 
