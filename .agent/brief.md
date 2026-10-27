@@ -1,6 +1,6 @@
-<!-- BRIEF: COMMIT=0d41feb0 HASH=323e6092 DATE=2026-10-27T10:05:32.320Z -->
+<!-- BRIEF: COMMIT=eba17a58 HASH=5fdf4f86 DATE=2026-10-27T10:08:53.308Z -->
 # Project Brief: web
-- **Commit**: `0d41feb0` | **Updated**: 2026-10-27T10:05:32.320Z | **Files Tracked**: 55
+- **Commit**: `eba17a58` | **Updated**: 2026-10-27T10:08:53.308Z | **Files Tracked**: 67
 
 ## Overview
 No README.md found.
@@ -12,14 +12,16 @@ No README.md found.
 ```text
 .
 ├── .agent/ (6 files)
-├── assets/ (8 files)
+├── assets/ (14 files)
 │   ├── agent-guard/ (6 files)
+│   ├── agrigence/ (6 files)
 │   └── dynamo/ (2 files)
 ├── css/ (4 files)
 ├── fonts/ (7 files)
 ├── js/ (4 files)
-├── public/ (18 files)
+├── public/ (24 files)
 │   ├── agent-guard/ (6 files)
+│   ├── agrigence/ (6 files)
 │   ├── dynamo/ (2 files)
 │   └── fonts/ (7 files)
 ├── agent-guard.html
