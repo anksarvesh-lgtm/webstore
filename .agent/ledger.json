@@ -4,8 +4,8 @@
   "goal": "Remove the top product-banner header and auto-sync indicator strip from index.html, dynamo.html, and agent-guard.html",
   "status": "active",
   "created_at": "2026-10-27T10:11:46.686Z",
-  "updated_at": "2026-10-27T10:12:01.912Z",
-  "checkpoint_count": 1,
+  "updated_at": "2026-10-27T10:13:06.172Z",
+  "checkpoint_count": 2,
   "steps": [
     {
       "id": "s1",
@@ -21,13 +21,13 @@
     {
       "id": "s2",
       "title": "Remove the top product-banner markup from index.html, dynamo.html, and agent-guard.html so the clean macOS App Store navigation bar is the true top element",
-      "status": "pending",
+      "status": "done",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [],
-      "note": null,
+      "note": "Completed Step s2: Removed top product-banner header, product switcher pills, and indicator strip from index.html, dynamo.html, and agent-guard.html so that the sleek macOS App Store navigation bar is the true top element.",
       "last_error": null,
-      "updated_at": "2026-10-27T10:11:46.686Z"
+      "updated_at": "2026-10-27T10:13:06.172Z"
     },
     {
       "id": "s3",
