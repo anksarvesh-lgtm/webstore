@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "task_id": "t-20261027-2385",
+  "goal": "Install REA (Reverse Engineer Anything) from https://github.com/morluto/rea and configure CLI/agent integration",
+  "status": "active",
+  "created_at": "2026-10-27T08:00:53.978Z",
+  "updated_at": "2026-10-27T08:01:16.856Z",
+  "checkpoint_count": 1,
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Check system prerequisites and Node/npm runtime environment",
+      "status": "done",
+      "tries": 0,
+      "max_tries": 3,
+      "depends_on": [],
+      "note": "Verified Node.js v24.22.1 (>=24.22.1 requirement met), npm v11.19.1, macOS 27.2 arm64",
+      "last_error": null,
+      "updated_at": "2026-10-27T08:01:16.856Z"
+    },
+    {
+      "id": "s2",
+      "title": "Install rea-agents package and verify binary availability",
+      "status": "pending",
+      "tries": 0,
+      "max_tries": 3,
+      "depends_on": [
+        "s1"
+      ],
+      "note": null,
+      "last_error": null,
+      "updated_at": "2026-10-27T08:00:53.978Z"
+    },
+    {
+      "id": "s3",
+      "title": "Run REA agent/MCP setup and inspect configuration",
+      "status": "pending",
+      "tries": 0,
+      "max_tries": 3,
+      "depends_on": [
+        "s2"
+      ],
+      "note": null,
+      "last_error": null,
+      "updated_at": "2026-10-27T08:00:53.978Z"
+    },
+    {
+      "id": "s4",
+      "title": "Validate REA CLI operation and create installation evidence summary",
+      "status": "pending",
+      "tries": 0,
+      "max_tries": 3,
+      "depends_on": [
+        "s3"
+      ],
+      "note": null,
+      "last_error": null,
+      "updated_at": "2026-10-27T08:00:53.978Z"
+    }
+  ]
+}
