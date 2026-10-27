@@ -1,55 +1,44 @@
 {
   "version": 1,
-  "task_id": "t-20261027-1372",
-  "goal": "Remove all version mentions from the website UI across HTML pages, metrics ribbons, download buttons, and dynamic client scripts",
+  "task_id": "t-20261027-9331",
+  "goal": "Integrate the official Agrigence logo across the website branding, navbars, favicons, touch icons, and footers",
   "status": "active",
-  "created_at": "2026-10-27T09:55:26.104Z",
-  "updated_at": "2026-10-27T09:58:38.621Z",
-  "checkpoint_count": 2,
+  "created_at": "2026-10-27T10:05:40.681Z",
+  "updated_at": "2026-10-27T10:05:40.681Z",
+  "checkpoint_count": 0,
   "steps": [
     {
       "id": "s1",
-      "title": "Identify all occurrences of version text, badges, labels, and dynamic data-gh-version tags across HTML files and JavaScript controllers",
-      "status": "done",
+      "title": "Process and install the official Agrigence logo into assets/agrigence/ and public/ as high-res PNG, web-optimized logo, favicon, and apple-touch-icon",
+      "status": "in_progress",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [],
-      "note": "Completed Step s1: Identified all occurrences of version text, badges, labels, and data-gh-version elements in index.html, dynamo.html, agent-guard.html, and js/github-releases.js. Mapped out replacement with clean non-version release labels (e.g. 'Latest Release', 'Current Build', 'Latest Build').",
+      "note": null,
       "last_error": null,
-      "updated_at": "2026-10-27T09:56:08.039Z"
+      "updated_at": "2026-10-27T10:05:40.681Z"
     },
     {
       "id": "s2",
-      "title": "Update index.html, dynamo.html, and agent-guard.html to remove explicit version numbers from buttons, metrics, and changelogs",
-      "status": "done",
+      "title": "Update the website brand headers, navbars, Open Graph meta tags, and footers in index.html, dynamo.html, and agent-guard.html to feature the official Agrigence logo",
+      "status": "pending",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [],
-      "note": "Completed Step s2: Updated index.html, dynamo.html, and agent-guard.html to remove explicit version numbers (v2.1.9, v0.2.18, etc.) from charts, what's new cards, download buttons, metrics ribbons, changelogs, and footers, replacing with clean release labels ('Latest Release', 'Current Build', 'Direct DMG', 'View Release').",
+      "note": null,
       "last_error": null,
-      "updated_at": "2026-10-27T09:58:38.621Z"
+      "updated_at": "2026-10-27T10:05:40.681Z"
     },
     {
       "id": "s3",
-      "title": "Update js/github-releases.js and js/appstore.js to prevent client-side injection of version numbers into UI elements",
+      "title": "Update server and static asset routes to serve the new logo, verify visual rendering and favicon endpoints, commit changes, and push to GitHub repository webstore",
       "status": "pending",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [],
       "note": null,
       "last_error": null,
-      "updated_at": "2026-10-27T09:55:26.104Z"
-    },
-    {
-      "id": "s4",
-      "title": "Verify website pages and download functionality, commit to git, and push to GitHub repository webstore",
-      "status": "pending",
-      "tries": 0,
-      "max_tries": 3,
-      "depends_on": [],
-      "note": null,
-      "last_error": null,
-      "updated_at": "2026-10-27T09:55:26.104Z"
+      "updated_at": "2026-10-27T10:05:40.681Z"
     }
   ]
 }
