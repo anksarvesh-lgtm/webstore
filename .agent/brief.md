@@ -1,6 +1,6 @@
-<!-- BRIEF: COMMIT=mtime-17 HASH=2b09dd5b DATE=2026-10-27T08:00:39.864Z -->
+<!-- BRIEF: COMMIT=4436ea47 HASH=e0046ebe DATE=2026-10-27T08:05:21.822Z -->
 # Project Brief: web
-- **Commit**: `mtime-17` | **Updated**: 2026-10-27T08:00:39.864Z | **Files Tracked**: 1
+- **Commit**: `4436ea47` | **Updated**: 2026-10-27T08:05:21.822Z | **Files Tracked**: 5
 
 ## Overview
 No README.md found.
@@ -11,7 +11,7 @@ No README.md found.
 ## Project Map (Directory Tree)
 ```text
 .
-└── .agent/ (1 file)
+└── .agent/ (5 files)
 ```
 
 ## Architecture Chart
