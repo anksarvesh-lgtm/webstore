@@ -4,45 +4,45 @@
   "goal": "Remove all Purge Mac files, assets, and references, establishing LiquidDynamo and Agent Guard as the dedicated web hub",
   "status": "active",
   "created_at": "2026-10-27T08:30:54.393Z",
-  "updated_at": "2026-10-27T08:30:54.393Z",
-  "checkpoint_count": 0,
+  "updated_at": "2026-10-27T08:31:48.855Z",
+  "checkpoint_count": 3,
   "steps": [
     {
       "id": "s1",
       "title": "Delete Purge-specific files, videos, analysis chunks, and logos",
-      "status": "in_progress",
+      "status": "done",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [],
-      "note": null,
+      "note": "Deleted all Purge Mac static files (logos, demo videos, clears SVGs, latest-release.js, purge-analytics.js, and src-analysis).",
       "last_error": null,
-      "updated_at": "2026-10-27T08:30:54.393Z"
+      "updated_at": "2026-10-27T08:31:10.057Z"
     },
     {
       "id": "s2",
       "title": "Replace index.html with LiquidDynamo as the primary homepage",
-      "status": "pending",
+      "status": "done",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [
         "s1"
       ],
-      "note": null,
+      "note": "Replaced index.html with LiquidDynamo as the primary flagship homepage with clean navigation to Agent Guard and zero references to Purge.",
       "last_error": null,
-      "updated_at": "2026-10-27T08:30:54.393Z"
+      "updated_at": "2026-10-27T08:31:41.755Z"
     },
     {
       "id": "s3",
       "title": "Update dynamo.html and agent-guard.html navigation to link between the two products",
-      "status": "pending",
+      "status": "done",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [
         "s2"
       ],
-      "note": null,
+      "note": "Updated dynamo.html and agent-guard.html headers, switcher pills, and footers to link symmetrically between LiquidDynamo and Agent Guard without Purge.",
       "last_error": null,
-      "updated_at": "2026-10-27T08:30:54.393Z"
+      "updated_at": "2026-10-27T08:31:48.855Z"
     },
     {
       "id": "s4",

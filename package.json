@@ -1,7 +1,7 @@
 {
-  "name": "purge-mac-replica",
-  "version": "1.13.1",
-  "description": "Pixel-perfect replica of https://purgemac.com/ built with reverse-engineered assets and design system",
+  "name": "dynamo-and-agent-guard",
+  "version": "2.1.9",
+  "description": "High-fidelity web showcase for LiquidDynamo (macOS Dynamic Island powerhouse) and Agent Guard (Autonomous MCP supervisor)",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -9,10 +9,13 @@
     "test": "node -e \"const http = require('http'); const req = http.get('http://localhost:3000', res => { console.log('HTTP Status:', res.statusCode); process.exit(res.statusCode === 200 ? 0 : 1); }); req.on('error', err => { console.error(err); process.exit(1); });\""
   },
   "keywords": [
-    "purgemac",
-    "mac-cleaner",
-    "replica",
-    "frontend"
+    "dynamo-mac",
+    "liquiddynamo",
+    "agent-guard",
+    "macos",
+    "dynamic-island",
+    "mcp",
+    "ai-agents"
   ],
   "author": "Sarvesh",
   "license": "MIT"
