@@ -1,0 +1,361 @@
+/* ==========================================================================
+   Agent Guard — Bespoke DAG Ledger & Supervisor Styling
+   ========================================================================== */
+
+.text-amber {
+  color: #ff9f0a !important;
+}
+.text-amber::before {
+  background: #ff9f0a !important;
+  box-shadow: 0 0 8px #ff9f0a !important;
+}
+.text-gradient-amber {
+  background: linear-gradient(135deg, #ff9f0a 0%, #ff6b00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.guard-shield-logo {
+  border-radius: 20px;
+  filter: drop-shadow(0 12px 24px rgba(255, 159, 10, 0.28));
+}
+.guard-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(255, 159, 10, 0.45) 0%, rgba(255, 107, 0, 0.15) 50%, transparent 70%);
+  filter: blur(20px);
+  z-index: 1;
+  pointer-events: none;
+}
+.shield-icon-svg {
+  font-size: 1rem;
+}
+
+/* Universal Agent Prompt Card */
+.prompt-box-row {
+  max-width: 780px;
+  margin: 0 auto 24px;
+  width: 100%;
+}
+.agent-prompt-card {
+  background: #151815;
+  border: 1px solid rgba(255, 159, 10, 0.3);
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 159, 10, 0.12);
+  text-align: left;
+}
+.prompt-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.bot-icon {
+  font-size: 1.25rem;
+}
+.prompt-card-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #ff9f0a;
+  flex: 1;
+  margin-left: 8px;
+}
+.copy-prompt-btn {
+  font-size: 0.75rem;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+.copy-prompt-btn:hover {
+  background: #ff9f0a;
+  color: #000;
+  font-weight: 600;
+}
+.prompt-text {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: #d0d6cc;
+  line-height: 1.55;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+/* DAG Ledger Window */
+.ledger-preview-container {
+  margin: 36px auto 0;
+  max-width: 880px;
+  width: 100%;
+}
+.ledger-window {
+  background: #111411;
+  border: 1px solid #232822;
+  border-radius: 18px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+.ledger-window-bar {
+  background: #181d19;
+  border-bottom: 1px solid #232822;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.window-dots {
+  display: flex;
+  gap: 6px;
+}
+.w-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.window-title {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: #868c81;
+}
+.window-status-pill {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #30d158;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(48, 209, 88, 0.12);
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(48, 209, 88, 0.25);
+}
+.pulse-green {
+  width: 6px;
+  height: 6px;
+  background: #30d158;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #30d158;
+  animation: pulse 1.8s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.ledger-body {
+  padding: 24px;
+}
+.ledger-stepper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.step-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  text-align: left;
+}
+.step-card.done {
+  border-left: 3px solid #30d158;
+}
+.step-card.in-progress {
+  border-left: 3px solid #ff9f0a;
+  background: rgba(255, 159, 10, 0.06);
+}
+.step-card.pending {
+  border-left: 3px solid #585e55;
+  opacity: 0.65;
+}
+.step-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #30d158;
+  background: rgba(48, 209, 88, 0.14);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+.step-badge-active {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #ff9f0a;
+  background: rgba(255, 159, 10, 0.2);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+.step-badge-pending {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #868c81;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+.step-info {
+  flex: 1;
+}
+.step-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+}
+.step-proof {
+  font-size: 0.75rem;
+  color: #868c81;
+  margin-top: 2px;
+}
+.step-time {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #868c81;
+}
+.live-tick {
+  color: #ff9f0a;
+  font-weight: 700;
+}
+
+/* Ledger Metrics Strip */
+.ledger-metrics-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 20px;
+}
+.metric-col {
+  text-align: center;
+}
+.m-val {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #fff;
+  display: block;
+}
+.m-lbl {
+  font-size: 0.75rem;
+  color: #868c81;
+}
+
+/* Card Visual Graphics for Agent Guard */
+.ledger-visual-diagram {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+.node-box {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #0c0f0d;
+}
+.node-box.active { border-color: #0073eb; color: #00e5ff; }
+.node-box.success { border-color: #30d158; color: #30d158; }
+.node-box.current { border-color: #ff9f0a; color: #ff9f0a; background: rgba(255, 159, 10, 0.1); }
+.node-box.git { border-color: #bf5af2; color: #bf5af2; }
+.node-arrow { color: #585e55; font-weight: 700; }
+
+.caffeinate-status-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid #2b312a;
+  border-radius: 10px;
+  padding: 16px 20px;
+  text-align: left;
+}
+.coffee-cup-icon {
+  font-size: 2rem;
+}
+.lease-title {
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.lease-sub {
+  color: #868c81;
+  font-size: 0.75rem;
+  margin: 2px 0 4px;
+}
+.lease-time {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #30d158;
+}
+
+.account-pool-grid {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+.acct-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.8125rem;
+  color: #fff;
+}
+.acct-row.active {
+  border-color: #ff9f0a;
+}
+.badge-acct {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  background: rgba(48, 209, 88, 0.16);
+  color: #30d158;
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+.skills-tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 440px;
+  justify-content: center;
+}
+.sk-tag {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  background: rgba(255, 255, 255, 0.06);
+  color: #868c81;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+.sk-tag.highlight {
+  background: rgba(0, 115, 235, 0.15);
+  border-color: rgba(0, 229, 255, 0.35);
+  color: #00e5ff;
+}

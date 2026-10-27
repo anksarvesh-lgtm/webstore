@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en" class="font-onest">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agent Guard: Autonomous AI Agent Supervisor & MCP Engine</title>
+  <meta name="description" content="Autonomous AI agent supervisor, crash-proof DAG ledger, multi-account 1% auto-rotator, and keep-awake lease engine for Claude, Gemini, Antigravity, and Cursor.">
+  <link rel="canonical" href="https://github.com/anksarvesh-lgtm/agent-guard">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Agent Guard: Autonomous AI Agent Supervisor & MCP Engine">
+  <meta property="og:description" content="Crash-proof DAG ledger, keep-awake lease engine, and 1% quota auto-rotator for AI coding agents.">
+  <meta property="og:image" content="/assets/agent-guard/logo.png">
+  <meta property="og:type" content="website">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/agent-guard/icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/agent-guard/logo.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/dynamo.css">
+  <link rel="stylesheet" href="/css/guard.css">
+</head>
+<body id="top">
+
+  <!-- Universal Product Switcher Bar -->
+  <aside class="product-banner">
+    <div class="wrap product-banner-inner">
+      <span class="product-badge text-amber">Autonomous Supervisor</span>
+      <div class="product-toggle-group">
+        <a href="/dynamo.html" class="product-pill">
+          <span class="pill-dot"></span>
+          LiquidDynamo
+        </a>
+        <a href="/agent-guard.html" class="product-pill active">
+          <span class="pill-shield"></span>
+          Agent Guard
+        </a>
+        <a href="/index.html" class="product-pill">
+          <span class="pill-cleaner"></span>
+          Purge Mac
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">
+        <img class="brand-logo" src="/assets/agent-guard/logo.svg" alt="Agent Guard" width="28" height="28" decoding="async">
+        Agent Guard
+      </a>
+      <div class="nav-links">
+        <a class="nav-github" href="https://github.com/anksarvesh-lgtm/agent-guard" target="_blank" rel="noopener noreferrer" aria-label="View Agent Guard on GitHub">
+          <svg class="icon icon--github" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+          </svg>
+          <span class="nav-github-stars" id="guard-github-stars">v0.2.18</span>
+        </a>
+        <a id="nav-download" class="btn btn-sm btn-secondary nav-download" href="https://github.com/anksarvesh-lgtm/agent-guard#instant-setup" target="_blank" rel="noopener noreferrer">
+          <span class="btn-inner">
+            <span class="shield-icon-svg">🛡️</span>
+            <span class="nav-download-label nav-download-label--full">Get Agent Guard</span>
+            <span class="nav-download-label nav-download-label--short">Install</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <div class="app-icon-wrap reveal d2">
+        <img class="hero-logo guard-shield-logo" src="/assets/agent-guard/logo.svg" alt="Agent Guard Emblem" width="124" height="124" decoding="async" fetchpriority="high">
+        <div class="guard-glow"></div>
+      </div>
+      <h1 class="headline reveal d2">Autonomous AI Agent Supervisor.<br><span class="text-gradient-amber">Crash-Proof DAG Ledger.</span></h1>
+      <p class="subhead reveal d3">Supervise autonomous coding agents with atomic step checkpoints, keep-awake leases,<br>multi-account 1% auto-rotation, and context compression across all your IDEs.</p>
+      
+      <!-- Option 1: 1-Line Terminal Install -->
+      <div class="snippet-row reveal d4">
+        <div class="snippet" role="group" aria-label="Agent Guard 1-line terminal command">
+          <div class="snippet-text">
+            <code class="snippet-code">curl -fsSL https://raw.githubusercontent.com/anksarvesh-lgtm/agent-guard/main/install.sh | bash</code>
+          </div>
+          <button class="snippet-copy" type="button" data-copy="curl -fsSL https://raw.githubusercontent.com/anksarvesh-lgtm/agent-guard/main/install.sh | bash" aria-label="Copy terminal install command">
+            <svg class="snippet-ico snippet-ico--copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+            <svg class="snippet-ico snippet-ico--check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"></path></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="or-divider reveal d4" aria-hidden="true">
+        <span class="or-divider__line"></span>
+        <span class="or-divider__text">or paste this universal prompt into your agent</span>
+        <span class="or-divider__line"></span>
+      </div>
+
+      <!-- Option 2: Universal AI Prompt Box -->
+      <div class="prompt-box-row reveal d4">
+        <div class="agent-prompt-card">
+          <div class="prompt-card-header">
+            <span class="bot-icon">🤖</span>
+            <span class="prompt-card-label">Universal Prompt for Claude, Gemini, Antigravity & Cursor</span>
+            <button class="btn btn-sm btn-secondary copy-prompt-btn" type="button" id="copy-universal-prompt">
+              <span>Copy Prompt</span>
+            </button>
+          </div>
+          <p class="prompt-text" id="universal-prompt-content">
+            Please install and activate the Agent Guard MCP supervisor (https://github.com/anksarvesh-lgtm/agent-guard.git). Run `curl -fsSL https://raw.githubusercontent.com/anksarvesh-lgtm/agent-guard/main/install.sh | bash` in the terminal, verify with `node ~/.agent-guard/dist/cli.js doctor`, and adopt the @agent-guard rules to supervise all my development tasks with atomic ledger checkpoints and keep-awake protection.
+          </p>
+        </div>
+      </div>
+
+      <p class="meta-line reveal d4">
+        <span>144/144 Tests Passing</span>
+        <span class="dot">·</span>
+        <span>Apache 2.0 Open Source</span>
+        <span class="dot">·</span>
+        <span>Zero Telemetry · 100% Local</span>
+        <span class="dot">·</span>
+        <span>269 Active Skills</span>
+      </p>
+
+      <!-- Live Interactive DAG Ledger Simulator -->
+      <div class="ledger-preview-container reveal d5">
+        <div class="ledger-window">
+          <div class="ledger-window-bar">
+            <div class="window-dots">
+              <span class="w-dot dot-red"></span>
+              <span class="w-dot dot-yellow"></span>
+              <span class="w-dot dot-green"></span>
+            </div>
+            <span class="window-title">.agent/ledger.json · Atomic State Supervision</span>
+            <div class="window-status-pill">
+              <span class="pulse-green"></span> SUPERVISING
+            </div>
+          </div>
+
+          <div class="ledger-body">
+            <div class="ledger-stepper">
+              <div class="step-card done">
+                <div class="step-badge">✓ s1</div>
+                <div class="step-info">
+                  <div class="step-title">repo_brief & project_map analysis</div>
+                  <div class="step-proof">Proof: Generated DAG capability map (37 files tracked, zero cyclic deps)</div>
+                </div>
+                <div class="step-time">0.4s</div>
+              </div>
+
+              <div class="step-card done">
+                <div class="step-badge">✓ s2</div>
+                <div class="step-info">
+                  <div class="step-title">keep_awake lease acquisition</div>
+                  <div class="step-proof">Proof: Native IOKit power assertion lease #84102 established. Sleep blocked.</div>
+                </div>
+                <div class="step-time">0.1s</div>
+              </div>
+
+              <div class="step-card in-progress">
+                <div class="step-badge-active">⚡ s3</div>
+                <div class="step-info">
+                  <div class="step-title">1% Quota Monitor & Auto-Rotator</div>
+                  <div class="step-proof">Active: Primary bucket at 80% quota · Auto-rotator pool armed (3 accounts standby)</div>
+                </div>
+                <div class="step-time live-tick">LIVE</div>
+              </div>
+
+              <div class="step-card pending">
+                <div class="step-badge-pending">○ s4</div>
+                <div class="step-info">
+                  <div class="step-title">Commit to git after finished step</div>
+                  <div class="step-proof">Enforced: Git commit required before advancing to subsequent DAG nodes</div>
+                </div>
+                <div class="step-time">Queued</div>
+              </div>
+            </div>
+
+            <!-- Ledger Metrics Strip -->
+            <div class="ledger-metrics-strip">
+              <div class="metric-col">
+                <span class="m-val">100%</span>
+                <span class="m-lbl">Crash Recoverability</span>
+              </div>
+              <div class="metric-col">
+                <span class="m-val text-gradient-amber">0.0 ms</span>
+                <span class="m-lbl">Sleep Delay</span>
+              </div>
+              <div class="metric-col">
+                <span class="m-val">-60%</span>
+                <span class="m-lbl">Token Compression</span>
+              </div>
+              <div class="metric-col">
+                <span class="m-val">0</span>
+                <span class="m-lbl">External Telemetry</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section: Core Pillars -->
+  <section class="section" id="pillars">
+    <div class="wrap">
+      <div class="section-eyebrow">core pillars</div>
+      <h2 class="section-title">Built for engineers running autonomous coding agents.</h2>
+      
+      <!-- Interactive Clears-Style Split Tabs -->
+      <div class="clears-split" data-motion="blur" data-dir="fwd" id="guard-split">
+        <div class="clears-index">
+          <div class="clears-index-track" role="tablist" aria-label="Agent Guard pillars" id="guard-index-track">
+            <span class="clears-index-pill" id="guard-index-pill" aria-hidden="true"></span>
+            
+            <button type="button" class="clears-index-item" role="tab" aria-selected="true" data-index="0">
+              <span class="clears-index-rail" aria-hidden="true"><span class="clears-index-fill clears-index-fill--run"></span></span>
+              <span class="clears-index-copy">
+                <span class="clears-index-name">Crash-Proof DAG Ledger</span>
+                <span class="clears-index-short">Deterministic state machine & replayable checkpoints.</span>
+              </span>
+            </button>
+
+            <button type="button" class="clears-index-item" role="tab" aria-selected="false" data-index="1">
+              <span class="clears-index-rail" aria-hidden="true"><span class="clears-index-fill"></span></span>
+              <span class="clears-index-copy">
+                <span class="clears-index-name">Keep-Awake Lease Guard</span>
+                <span class="clears-index-short">Prevents macOS sleep during long overnight runs.</span>
+              </span>
+            </button>
+
+            <button type="button" class="clears-index-item" role="tab" aria-selected="false" data-index="2">
+              <span class="clears-index-rail" aria-hidden="true"><span class="clears-index-fill"></span></span>
+              <span class="clears-index-copy">
+                <span class="clears-index-name">1% Quota Auto-Rotator</span>
+                <span class="clears-index-short">Zero-downtime credential switching on limit.</span>
+              </span>
+            </button>
+
+            <button type="button" class="clears-index-item" role="tab" aria-selected="false" data-index="3">
+              <span class="clears-index-rail" aria-hidden="true"><span class="clears-index-fill"></span></span>
+              <span class="clears-index-copy">
+                <span class="clears-index-name">269+ Active Skills Engine</span>
+                <span class="clears-index-short">JIT skill injection & Clean Architecture rules.</span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <div class="feature-media" id="guard-media">
+          <div class="clears-shot-sizer" aria-hidden="true"></div>
+          
+          <!-- Card 0: DAG Ledger -->
+          <div class="dynamo-shot-card" data-active="true" data-index="0">
+            <div class="shot-card-header">
+              <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+              <span class="card-title">Atomic Ledger · task_checkpoint Proof</span>
+            </div>
+            <div class="shot-card-body">
+              <div class="ledger-visual-diagram">
+                <div class="node-box active">task_start</div>
+                <div class="node-arrow">→</div>
+                <div class="node-box success">s1: Brief</div>
+                <div class="node-arrow">→</div>
+                <div class="node-box success">s2: Lease</div>
+                <div class="node-arrow">→</div>
+                <div class="node-box current">s3: Work</div>
+                <div class="node-arrow">→</div>
+                <div class="node-box git">git commit</div>
+              </div>
+              <p class="shot-caption">Every step requires tangible proof in the note. Agents cannot skip steps or lower test coverage unnoticed.</p>
+            </div>
+          </div>
+
+          <!-- Card 1: Keep Awake -->
+          <div class="dynamo-shot-card" data-index="1">
+            <div class="shot-card-header">
+              <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+              <span class="card-title">Native OS IOKit Lease Engine</span>
+            </div>
+            <div class="shot-card-body">
+              <div class="caffeinate-status-box">
+                <div class="coffee-cup-icon">☕</div>
+                <div class="lease-details">
+                  <div class="lease-title">Assertion: PreventUserIdleSystemSleep</div>
+                  <div class="lease-sub">Process: agent-guard-daemon (PID 84102)</div>
+                  <div class="lease-time">Active Lease: 3h 42m remaining</div>
+                </div>
+              </div>
+              <p class="shot-caption">When you start an overnight build or refactor, Agent Guard locks OS sleep until all DAG steps finish, then gracefully releases.</p>
+            </div>
+          </div>
+
+          <!-- Card 2: 1% Auto Rotator -->
+          <div class="dynamo-shot-card" data-index="2">
+            <div class="shot-card-header">
+              <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+              <span class="card-title">Multi-Account Pool & Auto-Switcher</span>
+            </div>
+            <div class="shot-card-body">
+              <div class="account-pool-grid">
+                <div class="acct-row active">
+                  <span>Primary Account (anksarvesh)</span>
+                  <span class="badge-acct">80% Available</span>
+                </div>
+                <div class="acct-row standby">
+                  <span>Standby Account 2</span>
+                  <span class="badge-acct">100% Armed</span>
+                </div>
+                <div class="acct-row standby">
+                  <span>Standby Account 3</span>
+                  <span class="badge-acct">100% Armed</span>
+                </div>
+              </div>
+              <p class="shot-caption">When primary quota drops to &le;1%, Agent Guard automatically switches API keys or accounts with zero downtime.</p>
+            </div>
+          </div>
+
+          <!-- Card 3: Skills Catalog -->
+          <div class="dynamo-shot-card" data-index="3">
+            <div class="shot-card-header">
+              <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+              <span class="card-title">Active Skills Catalog & JIT Execution</span>
+            </div>
+            <div class="shot-card-body">
+              <div class="skills-tag-cloud">
+                <span class="sk-tag highlight">ui-ux-pro-max</span>
+                <span class="sk-tag">clean-architecture</span>
+                <span class="sk-tag">test-driven-development</span>
+                <span class="sk-tag highlight">reverse-engineering</span>
+                <span class="sk-tag">security-and-hardening</span>
+                <span class="sk-tag">code-review-and-quality</span>
+                <span class="sk-tag highlight">ponytail-lazy-mode</span>
+                <span class="sk-tag">git-workflow-and-versioning</span>
+              </div>
+              <p class="shot-caption">Over 269 active skills loaded on demand to prevent prompt pollution while providing enterprise expertise.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="clears-split-copy" id="guard-copy">
+          <p class="clears-split-body" data-active="true" data-index="0">
+            Agents get lost in complex refactors without strict DAG constraints. Agent Guard enforces atomic step execution, records verified test output proof in <code>.agent/ledger.json</code>, and requires a git commit after every milestone.
+          </p>
+          <p class="clears-split-body" data-index="1" aria-hidden="true">
+            Long agent tasks shouldn't die because your MacBook went to sleep or closed its lid. Agent Guard acquires a kernel-level IOKit power assertion lease at task start, and automatically returns it to macOS when work completes.
+          </p>
+          <p class="clears-split-body" data-index="2" aria-hidden="true">
+            Never get woken up by an API rate limit error. Agent Guard monitors 5-hour rolling token buckets. If quota reaches &le;1%, it seamlessly switches to backup accounts from your encrypted local pool without dropping task context.
+          </p>
+          <p class="clears-split-body" data-index="3" aria-hidden="true">
+            Equip your agent with the world's most comprehensive engineering skills library: Anthropic official skills, UI-UX Pro Max, Clean Architecture, Ponytail lazy mode, and REA reverse-engineering.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Compatible Environments -->
+  <section class="section" id="environments">
+    <div class="wrap">
+      <div class="section-eyebrow">universal compatibility</div>
+      <h2 class="section-title">Works with every AI agent and IDE you use.</h2>
+      <div class="trust-grid">
+        <div class="trust-card">
+          <h3>
+            <span class="trust-icon" aria-hidden="true">✨</span>
+            Google Antigravity
+          </h3>
+          <p>Native stop-hook integration, IDE feedback loop breaker, and MCP stdio supervisor.</p>
+        </div>
+        <div class="trust-card">
+          <h3>
+            <span class="trust-icon" aria-hidden="true">🤖</span>
+            Claude Code CLI
+          </h3>
+          <p>One-prompt configuration with automatic skill discovery, cost counting, and lease protection.</p>
+        </div>
+        <div class="trust-card">
+          <h3>
+            <span class="trust-icon" aria-hidden="true">⚡</span>
+            Cursor & Windsurf
+          </h3>
+          <p>Seamless Model Context Protocol registration with auto-approved checkpoint tools.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Questions / FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <h2 class="section-title">Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item" data-index="0">
+          <button type="button" class="faq-q" aria-expanded="false" id="faq-g-0">
+            What happens if my terminal crashes or Mac reboots?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-panel" inert>
+            <div class="faq-panel-inner">
+              <p class="faq-a">Every single step checkpoint is atomically written to <code>.agent/ledger.json</code> and committed to git. When you reopen your agent and run <code>task_status</code>, Agent Guard resumes execution exactly from the last verified checkpoint.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-index="1">
+          <button type="button" class="faq-q" aria-expanded="false" id="faq-g-1">
+            Does Agent Guard send my code or tokens to external servers?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-panel" inert>
+            <div class="faq-panel-inner">
+              <p class="faq-a">Zero telemetry. Agent Guard operates 100% locally on your machine. No analytics, no phone-home servers, no telemetry pings. All state ledgers stay strictly within your local workspace.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-index="2">
+          <button type="button" class="faq-q" aria-expanded="false" id="faq-g-2">
+            How does the keep-awake lease work?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-panel" inert>
+            <div class="faq-panel-inner">
+              <p class="faq-a">Agent Guard invokes native macOS power assertion APIs (IOPMAssertionCreateWithName) to prevent system sleep while task steps remain in progress. As soon as all DAG steps are completed or canceled, the power assertion is instantly released.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-index="3">
+          <button type="button" class="faq-q" aria-expanded="false" id="faq-g-3">
+            How do I uninstall Agent Guard?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-panel" inert>
+            <div class="faq-panel-inner">
+              <p class="faq-a">Simply run <code>~/.agent-guard/dist/cli.js uninstall</code> or remove the <code>agent-guard</code> entry from your IDE's <code>mcp_config.json</code>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <a class="brand" href="#top">
+          <img class="brand-logo" src="/assets/agent-guard/logo.svg" alt="" width="28" height="28" decoding="async">
+          Agent Guard
+        </a>
+        <div class="footer-links">
+          <a href="/dynamo.html">LiquidDynamo</a>
+          <a href="/index.html">Purge Mac</a>
+          <a href="https://github.com/anksarvesh-lgtm/agent-guard" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://github.com/anksarvesh-lgtm/agent-guard#active-skills-catalog-269-active--3790-library" target="_blank" rel="noopener noreferrer">Skills Catalog</a>
+          <a href="https://github.com/anksarvesh-lgtm/agent-guard/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">License (Apache 2.0)</a>
+          <a href="https://github.com/anksarvesh-lgtm/agent-guard/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer">Security</a>
+        </div>
+      </div>
+      <div class="footer-fine">
+        <span>Architected by <a class="name" href="https://github.com/anksarvesh-lgtm" target="_blank" rel="noopener noreferrer">Sarvesh</a>. Zero-Telemetry Autonomous Agent Engine.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/guard.js"></script>
+</body>
+</html>
