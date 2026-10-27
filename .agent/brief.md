@@ -1,6 +1,6 @@
-<!-- BRIEF: COMMIT=e9186e72 HASH=72872e19 DATE=2026-10-27T08:34:47.822Z -->
+<!-- BRIEF: COMMIT=481ed1fb HASH=a220bc37 DATE=2026-10-27T08:44:18.975Z -->
 # Project Brief: web
-- **Commit**: `e9186e72` | **Updated**: 2026-10-27T08:34:47.822Z | **Files Tracked**: 51
+- **Commit**: `481ed1fb` | **Updated**: 2026-10-27T08:44:18.975Z | **Files Tracked**: 53
 
 ## Overview
 No README.md found.
@@ -11,13 +11,13 @@ No README.md found.
 ## Project Map (Directory Tree)
 ```text
 .
-├── .agent/ (5 files)
+├── .agent/ (6 files)
 ├── assets/ (8 files)
 │   ├── agent-guard/ (6 files)
 │   └── dynamo/ (2 files)
 ├── css/ (3 files)
 ├── fonts/ (7 files)
-├── js/ (2 files)
+├── js/ (3 files)
 ├── public/ (18 files)
 │   ├── agent-guard/ (6 files)
 │   ├── dynamo/ (2 files)
