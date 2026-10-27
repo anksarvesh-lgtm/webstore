@@ -129,26 +129,14 @@
     const oldVersion = activeReleases[productKey] ? activeReleases[productKey].version : null;
     activeReleases[productKey] = release;
 
-    // Update download buttons
+    // Ensure download buttons link to freshest releases
     const downloadBtns = document.querySelectorAll(`[data-gh-download="${productKey}"]`);
     downloadBtns.forEach(btn => {
-      // Use direct local auto-redirect endpoint or resolved release download URL
       btn.setAttribute('href', release.downloadUrl || (productKey === 'dynamo' ? '/download/dynamo' : '/download/guard'));
       btn.setAttribute('download', '');
     });
 
-    // Update version labels
-    const versionLabels = document.querySelectorAll(`[data-gh-version="${productKey}"]`);
-    versionLabels.forEach(el => {
-      el.textContent = `v${release.version}`;
-      el.removeAttribute('hidden');
-      if (oldVersion && oldVersion !== release.version) {
-        el.classList.add('version-updated-pulse');
-        setTimeout(() => el.classList.remove('version-updated-pulse'), 1800);
-      }
-    });
-
-    // Update release date labels
+    // Update release date labels if present
     if (release.publishedAt) {
       const dateLabels = document.querySelectorAll(`[data-gh-date="${productKey}"]`);
       dateLabels.forEach(el => {
@@ -169,9 +157,7 @@
         if (serverData.dynamo) applyToDOM('dynamo', serverData.dynamo);
         if (serverData.guard) applyToDOM('guard', serverData.guard);
         
-        const currentProduct = window.location.pathname.includes('agent-guard') ? 'guard' : 'dynamo';
-        const currentVer = activeReleases[currentProduct].version;
-        setIndicatorStatus('active', `Auto-Sync Live · v${currentVer}`);
+        setIndicatorStatus('active', 'Auto-Sync Live · Up to Date');
         return;
       }
 
@@ -184,8 +170,7 @@
       if (dynamoRel) applyToDOM('dynamo', dynamoRel);
       if (guardRel) applyToDOM('guard', guardRel);
 
-      const currentProduct = window.location.pathname.includes('agent-guard') ? 'guard' : 'dynamo';
-      setIndicatorStatus('active', `Live v${activeReleases[currentProduct].version}`);
+      setIndicatorStatus('active', 'Auto-Sync Live · Up to Date');
     } catch (e) {
       setIndicatorStatus('active', 'Auto-Sync Active');
     } finally {
