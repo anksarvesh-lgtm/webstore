@@ -308,3 +308,31 @@ html, body {
   100% { color: inherit; text-shadow: none; }
 }
 
+/* App Store by Agrigence Brand Styling */
+.brand-by {
+  font-weight: 500;
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin-left: -2px;
+}
+
+.brand-app-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: var(--line-soft);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  padding: 3px 8px;
+  border-radius: 6px;
+  margin-left: 6px;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 640px) {
+  .brand-app-badge {
+    display: none;
+  }
+}
+
+

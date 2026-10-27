@@ -1,7 +1,11 @@
 {
-  "name": "dynamo-and-agent-guard",
+  "name": "webstore",
   "version": "2.1.9",
-  "description": "High-fidelity web showcase for LiquidDynamo (macOS Dynamic Island powerhouse) and Agent Guard (Autonomous MCP supervisor)",
+  "description": "App Store by Agrigence — Official Web Store for LiquidDynamo & Agent Guard with 1-click downloads, auto-sync, and changelogs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anksarvesh-lgtm/webstore.git"
+  },
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
