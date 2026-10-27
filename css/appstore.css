@@ -1,0 +1,695 @@
+/* ==========================================================================
+   App Store by Agrigence — macOS App Store Design System & Components
+   ========================================================================== */
+
+:root {
+  --store-bg: var(--paper, #f4f6f3);
+  --store-card: var(--surface, #ffffff);
+  --store-border: var(--line, #e2e6df);
+  --store-border-subtle: var(--line-soft, #ecefe9);
+  --store-blue: #0071e3;
+  --store-blue-hover: #0077ed;
+  --store-blue-soft: #e5f1ff;
+  --store-star: #f59e0b;
+  --store-pill-bg: #eef1ec;
+  --store-pill-text: #0071e3;
+  --store-pill-hover: #e0e5dd;
+  --store-radius-lg: 20px;
+  --store-radius-md: 14px;
+  --store-radius-sm: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   App Store Main Container & Shell
+   -------------------------------------------------------------------------- */
+.appstore-shell {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 24px 24px 80px;
+}
+
+/* Store Header & Category Bar */
+.store-header {
+  margin-bottom: 28px;
+}
+
+.store-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.store-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.store-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  line-height: 1.15;
+}
+
+.store-subtitle {
+  font-size: 0.96rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* App Store Search & Filter */
+.store-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.store-search-wrap {
+  position: relative;
+  min-width: 240px;
+  max-width: 320px;
+  flex: 1;
+}
+
+.store-search-input {
+  width: 100%;
+  height: 38px;
+  padding: 0 36px 0 36px;
+  background: var(--store-card);
+  border: 1px solid var(--store-border);
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  color: var(--ink);
+  outline: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(24, 27, 23, 0.04);
+}
+
+.store-search-input:focus {
+  border-color: var(--store-blue);
+  box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15);
+}
+
+.store-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.store-search-clear {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background: var(--line);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+
+.store-search-clear.active {
+  display: flex;
+}
+
+/* Category Tabs (Discover, Mac Utilities, Developer Tools, Updates) */
+.store-nav-tabs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+}
+
+.store-nav-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.store-tab-btn {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.18s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.store-tab-btn:hover {
+  color: var(--ink);
+  background: rgba(24, 27, 23, 0.04);
+}
+
+.store-tab-btn.active {
+  color: var(--ink);
+  background: var(--store-card);
+  border-color: var(--store-border);
+  box-shadow: 0 1px 3px rgba(24, 27, 23, 0.06);
+}
+
+/* --------------------------------------------------------------------------
+   App Store Editorial Spotlight / Today Carousel
+   -------------------------------------------------------------------------- */
+.store-spotlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.spotlight-card {
+  border-radius: var(--store-radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--store-border);
+  background: var(--store-card);
+  box-shadow: 0 2px 8px rgba(24, 27, 23, 0.05), 0 14px 28px -10px rgba(24, 27, 23, 0.07);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.spotlight-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px -4px rgba(24, 27, 23, 0.12), 0 20px 40px -12px rgba(24, 27, 23, 0.09);
+}
+
+.spotlight-header {
+  padding: 24px 24px 16px;
+}
+
+.spotlight-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+.spotlight-eyebrow.cyan {
+  color: #0088a8;
+}
+
+.spotlight-eyebrow.amber {
+  color: #b45309;
+}
+
+.spotlight-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+
+.spotlight-desc {
+  font-size: 0.94rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+/* Interactive Preview Stage inside Spotlight */
+.spotlight-stage {
+  padding: 16px 24px 20px;
+  background: linear-gradient(180deg, rgba(244, 246, 243, 0.6) 0%, rgba(244, 246, 243, 0.95) 100%);
+  border-top: 1px solid var(--store-border-subtle);
+  border-bottom: 1px solid var(--store-border-subtle);
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spotlight-preview-inner {
+  width: 100%;
+  border-radius: var(--store-radius-sm);
+  background: #0d1117;
+  color: #fff;
+  padding: 14px 18px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+/* Spotlight App Footer (Icon + Title + GET Pill Button) */
+.spotlight-footer {
+  padding: 16px 24px;
+  background: var(--store-card);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.spotlight-app-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.app-squircle-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  object-fit: cover;
+  background: #fff;
+}
+
+.spotlight-app-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.spotlight-app-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spotlight-app-sub {
+  font-size: 0.82rem;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* --------------------------------------------------------------------------
+   App Store "GET" Button & In-App Purchase Note
+   -------------------------------------------------------------------------- */
+.get-button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.btn-get {
+  background: var(--store-pill-bg);
+  color: var(--store-blue);
+  font-family: var(--font-display);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 7px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.18s ease;
+  min-width: 84px;
+}
+
+.btn-get:hover {
+  background: var(--store-pill-hover);
+  color: var(--store-blue-hover);
+  transform: scale(1.02);
+}
+
+.btn-get--primary {
+  background: var(--store-blue);
+  color: #ffffff;
+}
+
+.btn-get--primary:hover {
+  background: var(--store-blue-hover);
+  color: #ffffff;
+}
+
+.btn-get-iap {
+  font-size: 0.68rem;
+  color: var(--meta);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   App Store Shelves & Collection Rows (Top Charts / Utilities)
+   -------------------------------------------------------------------------- */
+.store-shelf {
+  margin-bottom: 48px;
+}
+
+.store-shelf-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--store-border-subtle);
+}
+
+.shelf-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.shelf-see-all {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--store-blue);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.shelf-see-all:hover {
+  color: var(--store-blue-hover);
+}
+
+/* Top Charts Grid */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.chart-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 18px;
+  background: var(--store-card);
+  border: 1px solid var(--store-border);
+  border-radius: var(--store-radius-md);
+  box-shadow: 0 1px 2px rgba(24, 27, 23, 0.03);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.18s ease;
+}
+
+.chart-item:hover {
+  border-color: color-mix(in srgb, var(--store-border) 60%, var(--muted));
+  box-shadow: 0 4px 12px rgba(24, 27, 23, 0.06);
+  transform: translateY(-1px);
+}
+
+.chart-rank {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--ink);
+  min-width: 24px;
+  text-align: center;
+}
+
+.chart-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  flex-shrink: 0;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chart-body {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.chart-name {
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+}
+
+.chart-category {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.chart-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--meta);
+}
+
+.star-rating {
+  color: var(--store-star);
+  letter-spacing: 1px;
+}
+
+/* --------------------------------------------------------------------------
+   App Store Product Page (Metrics Ribbon & What's New)
+   -------------------------------------------------------------------------- */
+.app-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--store-border);
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.app-detail-lead {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  min-width: 0;
+}
+
+.app-detail-icon {
+  width: 104px;
+  height: 104px;
+  border-radius: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.app-detail-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.app-detail-h1 {
+  font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  line-height: 1.15;
+}
+
+.app-detail-subtitle {
+  font-size: 1.05rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.app-detail-developer {
+  font-size: 0.86rem;
+  color: var(--store-blue);
+  font-weight: 600;
+}
+
+/* App Store Metrics Ribbon (Ratings, Chart Rank, Age, Developer, Size) */
+.metrics-ribbon {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 12px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--store-border);
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.metric-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 0 10px;
+  border-right: 1px solid var(--store-border-subtle);
+}
+
+.metric-cell:last-child {
+  border-right: none;
+}
+
+.metric-cell__label {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--meta);
+}
+
+.metric-cell__value {
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+.metric-cell__sub {
+  font-size: 0.74rem;
+  color: var(--muted);
+}
+
+/* App Store "What's New" Section */
+.store-whats-new-card {
+  background: var(--store-card);
+  border: 1px solid var(--store-border);
+  border-radius: var(--store-radius-md);
+  padding: 24px;
+  margin-bottom: 36px;
+  box-shadow: 0 1px 3px rgba(24, 27, 23, 0.04);
+}
+
+.whats-new-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.whats-new-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.whats-new-version {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--meta);
+  font-weight: 500;
+}
+
+.whats-new-body {
+  font-size: 0.94rem;
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+.whats-new-body ul {
+  padding-left: 20px;
+  margin-top: 8px;
+}
+
+.whats-new-body li {
+  margin-bottom: 6px;
+}
+
+/* App Store Information Sidebar Grid */
+.app-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px 24px;
+  padding: 24px;
+  background: var(--store-card);
+  border: 1px solid var(--store-border);
+  border-radius: var(--store-radius-md);
+  margin-top: 24px;
+}
+
+.app-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.app-info-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--meta);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.app-info-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .appstore-shell {
+    padding: 16px 16px 60px;
+  }
+  .store-header-top {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .store-search-wrap {
+    max-width: 100%;
+  }
+  .metrics-ribbon {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .metric-cell:nth-child(3) {
+    border-right: none;
+  }
+  .metric-cell:nth-child(n+4) {
+    margin-top: 14px;
+  }
+  .app-detail-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
