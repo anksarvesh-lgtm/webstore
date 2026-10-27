@@ -90,8 +90,27 @@
     }
   }
 
+  function initCardNavigation() {
+    const clickableCards = document.querySelectorAll('[data-app-url]');
+    clickableCards.forEach(card => {
+      card.addEventListener('click', (e) => {
+        // If user clicked directly on a download GET button, allow default download behavior
+        if (e.target.closest('.btn-get') || e.target.closest('[data-gh-download]')) {
+          return;
+        }
+        
+        const url = card.getAttribute('data-app-url');
+        if (url) {
+          window.location.href = url;
+        }
+      });
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     initSearch();
     initCategoryTabs();
+    initCardNavigation();
   });
 })();
+
