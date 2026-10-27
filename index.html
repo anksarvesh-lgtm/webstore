@@ -35,48 +35,30 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="/css/styles.css">
-
-  <!-- Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "name": "Purge",
-        "url": "https://purgemac.com/"
-      },
-      {
-        "@type": "Organization",
-        "name": "Purge",
-        "url": "https://purgemac.com",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://purgemac.com/purge-logo-240.png"
-        },
-        "sameAs": "https://github.com/jithin-sabu/purge-app"
-      },
-      {
-        "@type": "SoftwareApplication",
-        "name": "Purge",
-        "operatingSystem": "macOS",
-        "applicationCategory": "UtilitiesApplication",
-        "url": "https://purgemac.com/",
-        "downloadUrl": "https://github.com/jithin-sabu/purge-app/releases/download/v1.13.1/Purgev1.13.1.dmg",
-        "sameAs": "https://github.com/jithin-sabu/purge-app",
-        "codeRepository": "https://github.com/jithin-sabu/purge-app",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        },
-        "softwareVersion": "1.13.1"
-      }
-    ]
-  }
-  </script>
+  <link rel="stylesheet" href="/css/dynamo.css">
 </head>
 <body id="top">
+
+  <!-- Universal Product Switcher Bar -->
+  <aside class="product-banner">
+    <div class="wrap product-banner-inner">
+      <span class="product-badge">Mac Innovation Hub</span>
+      <div class="product-toggle-group">
+        <a href="/dynamo.html" class="product-pill">
+          <span class="pill-dot"></span>
+          LiquidDynamo
+        </a>
+        <a href="/agent-guard.html" class="product-pill">
+          <span class="pill-shield"></span>
+          Agent Guard
+        </a>
+        <a href="/index.html" class="product-pill active">
+          <span class="pill-cleaner"></span>
+          Purge Mac
+        </a>
+      </div>
+    </div>
+  </aside>
 
   <!-- Navigation -->
   <nav class="nav">
@@ -504,8 +486,8 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="/public/latest-release.js"></script>
-  <script src="/public/purge-analytics.js"></script>
+  <script src="/latest-release.js"></script>
+  <script src="/purge-analytics.js"></script>
   <script src="/js/main.js"></script>
 </body>
 </html>

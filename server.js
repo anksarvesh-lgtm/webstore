@@ -29,11 +29,18 @@ const server = http.createServer((req, res) => {
 
   let filePath = path.join(ROOT, safePath);
 
+  // If path doesn't exist, try appending .html for clean URLs
+  if (!fs.existsSync(filePath) && fs.existsSync(filePath + '.html')) {
+    filePath = filePath + '.html';
+  }
+
   // If path doesn't exist, check public/ as fallback
   if (!fs.existsSync(filePath)) {
     const publicPath = path.join(ROOT, 'public', safePath);
     if (fs.existsSync(publicPath)) {
       filePath = publicPath;
+    } else if (fs.existsSync(publicPath + '.html')) {
+      filePath = publicPath + '.html';
     } else {
       res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
       res.end('404 Not Found');
