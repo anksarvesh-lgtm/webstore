@@ -1,6 +1,6 @@
-<!-- BRIEF: COMMIT=1003a6c8 HASH=71f534fe DATE=2026-10-27T08:18:06.611Z -->
+<!-- BRIEF: COMMIT=950f104d HASH=079dbe1a DATE=2026-10-27T08:27:39.073Z -->
 # Project Brief: web
-- **Commit**: `1003a6c8` | **Updated**: 2026-10-27T08:18:06.611Z | **Files Tracked**: 37
+- **Commit**: `950f104d` | **Updated**: 2026-10-27T08:27:39.073Z | **Files Tracked**: 59
 
 ## Overview
 No README.md found.
@@ -12,13 +12,20 @@ No README.md found.
 ```text
 .
 ├── .agent/ (5 files)
-├── css/ (1 file)
-├── js/ (1 file)
-├── public/ (21 files)
+├── assets/ (8 files)
+│   ├── agent-guard/ (6 files)
+│   └── dynamo/ (2 files)
+├── css/ (3 files)
+├── js/ (3 files)
+├── public/ (29 files)
+│   ├── agent-guard/ (6 files)
 │   ├── clears/ (4 files)
+│   ├── dynamo/ (2 files)
 │   └── fonts/ (7 files)
 ├── src-analysis/ (6 files)
 │   └── chunks/ (3 files)
+├── agent-guard.html
+├── dynamo.html
 ├── index.html
 ├── package.json
 └── server.js
