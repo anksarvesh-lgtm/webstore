@@ -1,44 +1,55 @@
 {
   "version": 1,
-  "task_id": "t-20261027-8347",
-  "goal": "Remove the top product-banner header and auto-sync indicator strip from index.html, dynamo.html, and agent-guard.html",
+  "task_id": "t-20261027-8018",
+  "goal": "Make app cards, sections, names, and icons on the storefront clickable to display full app information and product details",
   "status": "active",
-  "created_at": "2026-10-27T10:11:46.686Z",
-  "updated_at": "2026-10-27T10:12:01.912Z",
-  "checkpoint_count": 1,
+  "created_at": "2026-10-27T10:14:58.458Z",
+  "updated_at": "2026-10-27T10:14:58.458Z",
+  "checkpoint_count": 0,
   "steps": [
     {
       "id": "s1",
-      "title": "Identify all occurrences of the top product-banner, product switcher pills, and top release indicator in index.html, dynamo.html, agent-guard.html, and js/github-releases.js",
-      "status": "done",
+      "title": "Update index.html HTML markup so app names, icons, and card containers have explicit product detail links with proper accessibility attributes",
+      "status": "in_progress",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [],
-      "note": "Completed Step s1: Identified all occurrences of the top product-banner and release indicator in index.html, dynamo.html, agent-guard.html, and js/github-releases.js.",
+      "note": null,
       "last_error": null,
-      "updated_at": "2026-10-27T10:12:01.912Z"
+      "updated_at": "2026-10-27T10:14:58.458Z"
     },
     {
       "id": "s2",
-      "title": "Remove the top product-banner markup from index.html, dynamo.html, and agent-guard.html so the clean macOS App Store navigation bar is the true top element",
+      "title": "Enhance css/appstore.css with clickable card hover interactions, cursor cues, and smooth transition states",
       "status": "pending",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [],
       "note": null,
       "last_error": null,
-      "updated_at": "2026-10-27T10:11:46.686Z"
+      "updated_at": "2026-10-27T10:14:58.458Z"
     },
     {
       "id": "s3",
-      "title": "Update js/github-releases.js so it does not auto-insert an indicator into the removed banner, test the pages, commit to git, and push to GitHub repository webstore",
+      "title": "Update js/appstore.js to add delegated click handling on all app cards and sections so clicking anywhere on an app card opens its full info product page",
       "status": "pending",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [],
       "note": null,
       "last_error": null,
-      "updated_at": "2026-10-27T10:11:46.686Z"
+      "updated_at": "2026-10-27T10:14:58.458Z"
+    },
+    {
+      "id": "s4",
+      "title": "Verify all click interactions, test server responses, commit changes, and push to GitHub repository webstore",
+      "status": "pending",
+      "tries": 0,
+      "max_tries": 3,
+      "depends_on": [],
+      "note": null,
+      "last_error": null,
+      "updated_at": "2026-10-27T10:14:58.458Z"
     }
   ]
 }
