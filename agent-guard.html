@@ -49,16 +49,18 @@
         Agent Guard
       </a>
       <div class="nav-links">
+        <a class="nav-link" href="#readme">README</a>
+        <a class="nav-link" href="#changelog">Changelog</a>
         <a class="nav-github" href="https://github.com/anksarvesh-lgtm/agent-guard" target="_blank" rel="noopener noreferrer" aria-label="View Agent Guard on GitHub">
           <svg class="icon icon--github" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
           </svg>
-          <span class="nav-github-stars" id="guard-github-stars">v0.2.18</span>
+          <span class="nav-github-stars" id="guard-github-stars" data-gh-version="guard">v0.2.18</span>
         </a>
-        <a id="nav-download" class="btn btn-sm btn-secondary nav-download" href="https://github.com/anksarvesh-lgtm/agent-guard#instant-setup" target="_blank" rel="noopener noreferrer">
+        <a id="nav-download" class="btn btn-sm btn-secondary nav-download" href="https://github.com/anksarvesh-lgtm/agent-guard/releases/latest" target="_blank" rel="noopener noreferrer" data-gh-download="guard">
           <span class="btn-inner">
             <span class="shield-icon-svg">🛡️</span>
-            <span class="nav-download-label nav-download-label--full">Get Agent Guard</span>
+            <span class="nav-download-label nav-download-label--full">Get Release (<span data-gh-version="guard">v0.2.18</span>)</span>
             <span class="nav-download-label nav-download-label--short">Install</span>
           </span>
         </a>
@@ -75,6 +77,16 @@
       </div>
       <h1 class="headline reveal d2">Autonomous AI Agent Supervisor.<br><span class="text-gradient-amber">Crash-Proof DAG Ledger.</span></h1>
       <p class="subhead reveal d3">Supervise autonomous coding agents with atomic step checkpoints, keep-awake leases,<br>multi-account 1% auto-rotation, and context compression across all your IDEs.</p>
+
+      <!-- 1-Click Release Action -->
+      <div class="cta-row reveal d4" style="margin-bottom: 20px;">
+        <a id="hero-download" class="btn btn-lg btn-glow-guard" href="https://github.com/anksarvesh-lgtm/agent-guard/releases/latest" target="_blank" rel="noopener noreferrer" data-gh-download="guard">
+          <span class="btn-inner">
+            <span class="shield-icon-svg">🛡️</span>
+            Download Latest Release (<span data-gh-version="guard">v0.2.18</span>)
+          </span>
+        </a>
+      </div>
       
       <!-- Option 1: 1-Line Terminal Install -->
       <div class="snippet-row reveal d4">
@@ -386,6 +398,133 @@
     </div>
   </section>
 
+  <!-- Section: README Highlights -->
+  <section class="section" id="readme">
+    <div class="wrap">
+      <div class="section-eyebrow">SUPERVISOR AT A GLANCE</div>
+      <h2 class="section-title">README Highlights</h2>
+      <p class="subhead">Crash-proof DAG ledger architecture, verified unit test suites, and zero-telemetry design.</p>
+
+      <div class="readme-grid">
+        <div class="readme-card">
+          <span class="readme-card__badge">Atomic DAG Ledger</span>
+          <h3 class="readme-card__title">State Machine & Rollback</h3>
+          <p class="readme-card__desc">Strict ledger journaling in <code>.agent/ledger.json</code> with automated rollback snapshots (<code>.prev.json</code>). Guarantees zero lost context across unexpected shell disconnects.</p>
+          <div class="readme-card__footer">
+            <span>Atomic Commits</span>
+            <span>Git Integrated</span>
+          </div>
+        </div>
+
+        <div class="readme-card">
+          <span class="readme-card__badge">macOS Native</span>
+          <h3 class="readme-card__title">Keep-Awake Assertion Leases</h3>
+          <p class="readme-card__desc">Direct integration with macOS power assertion APIs (IOPMAssertionCreateWithName). Prevents display or system sleep during long compilation runs or autonomous tasks.</p>
+          <div class="readme-card__footer">
+            <span>Kernel Assertion</span>
+            <span>Heartbeat Lease</span>
+          </div>
+        </div>
+
+        <div class="readme-card">
+          <span class="readme-card__badge">Zero Downtime</span>
+          <h3 class="readme-card__title">1% Account Auto-Rotation</h3>
+          <p class="readme-card__desc">Continuous quota watchdog tracking token utilization across Claude, Gemini, and OpenAI accounts. Dynamically rotates active keys when remaining quota dips below 1%.</p>
+          <div class="readme-card__footer">
+            <span>Proactive Failover</span>
+            <span>Multi-Provider</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Spec Panel -->
+      <div class="scan-panel" style="margin-top: 32px;">
+        <div class="scan-head">
+          <span>Supervisor Specifications & Capabilities</span>
+          <span>Verified Oct 2026</span>
+        </div>
+        <div class="scan-row">
+          <span class="scan-dot" style="background: #107569;"></span>
+          <div class="scan-main">
+            <div class="scan-name">Test Suite Coverage</div>
+            <div class="scan-desc">144 / 144 unit and integration tests passing (100% green). Verified across macOS 14/15, Linux, and Windows environments.</div>
+          </div>
+          <span class="scan-path">144 / 144 Tests</span>
+        </div>
+        <div class="scan-row">
+          <span class="scan-dot" style="background: #0073eb;"></span>
+          <div class="scan-main">
+            <div class="scan-name">Curated Agent Skills</div>
+            <div class="scan-desc">269 actively indexed skills in the local catalog spanning full-stack frameworks, security auditing, performance profiling, and DevOps.</div>
+          </div>
+          <span class="scan-path">269 Skills Active</span>
+        </div>
+        <div class="scan-row">
+          <span class="scan-dot" style="background: #f59e0b;"></span>
+          <div class="scan-main">
+            <div class="scan-name">Runtime Requirements</div>
+            <div class="scan-desc">Node.js >= 20.0.0. Zero binary compilation required. Standard MCP JSON-RPC protocol over stdio.</div>
+          </div>
+          <span class="scan-path">Node >= 20.0.0</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Changelog -->
+  <section class="section" id="changelog">
+    <div class="wrap">
+      <div class="section-eyebrow">RELEASE TIMELINE</div>
+      <h2 class="section-title">Changelog & Milestones</h2>
+      <p class="subhead">Continuous updates powering non-stop, reliable autonomous coding workflows.</p>
+
+      <ul class="changelog changelog-section">
+        <!-- Release v0.2.18 -->
+        <li class="changelog-entry">
+          <div class="changelog-meta">
+            <h3 class="changelog-version">
+              <a href="https://github.com/anksarvesh-lgtm/agent-guard/releases/tag/v0.2.18" target="_blank" rel="noopener noreferrer">v0.2.18</a>
+            </h3>
+            <span class="changelog-latest">Latest Release</span>
+            <time datetime="2026-10-27" data-gh-date="guard">October 2026</time>
+          </div>
+          <div class="changelog-notes">
+            <div class="changelog-actions">
+              <span class="changelog-badge-pill">Production Ready</span>
+              <a class="btn btn-sm btn-secondary" href="https://github.com/anksarvesh-lgtm/agent-guard/releases/latest" target="_blank" rel="noopener noreferrer" data-gh-download="guard">
+                View Release (v0.2.18)
+              </a>
+            </div>
+            <ul>
+              <li><strong>Atomic Step Recovery:</strong> Instant rollback snapshot verification using <code>.agent/ledger.prev.json</code> preventing corrupt DAG states on unexpected termination.</li>
+              <li><strong>Lease Heartbeat Watchdog:</strong> Upgraded native <code>caffeinate</code> assertion lease with auto-refresh daemon and safety timeout.</li>
+              <li><strong>Dynamic Account Rotation:</strong> Proactive credential auto-switch triggered when remaining token quota reaches &lt;= 1%.</li>
+              <li><strong>Context Compressor:</strong> Intelligent context budget preservation for Gemini 1.5 Pro (2M) and Claude 3.5 Sonnet.</li>
+              <li><strong>Automated Doctor Suite:</strong> <code>cli.js doctor</code> now performs end-to-end MCP latency and permission audits.</li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- Release v0.2.17 -->
+        <li class="changelog-entry">
+          <div class="changelog-meta">
+            <h3 class="changelog-version">
+              <a href="https://github.com/anksarvesh-lgtm/agent-guard/releases" target="_blank" rel="noopener noreferrer">v0.2.17</a>
+            </h3>
+            <time datetime="2026-09-22">September 2026</time>
+          </div>
+          <div class="changelog-notes">
+            <ul>
+              <li><strong>Semantic Code Map:</strong> AST-based workspace indexing reducing unnecessary whole-file reads by 84%.</li>
+              <li><strong>Multi-IDE Compatibility:</strong> Seamless out-of-the-box support for Antigravity, Claude Code, Cursor, and Windsurf.</li>
+              <li><strong>Zero-Telemetry Protocol:</strong> All ledger states, logs, and cost counters remain 100% on the local filesystem.</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
   <!-- Section: Questions / FAQ -->
   <section class="section" id="faq">
     <div class="wrap">
@@ -451,9 +590,11 @@
           Agent Guard
         </a>
         <div class="footer-links">
+          <a href="#readme">README</a>
+          <a href="#changelog">Changelog</a>
           <a href="/index.html">LiquidDynamo</a>
-          
           <a href="https://github.com/anksarvesh-lgtm/agent-guard" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://github.com/anksarvesh-lgtm/agent-guard/releases" target="_blank" rel="noopener noreferrer">Releases (<span data-gh-version="guard">v0.2.18</span>)</a>
           <a href="https://github.com/anksarvesh-lgtm/agent-guard#active-skills-catalog-269-active--3790-library" target="_blank" rel="noopener noreferrer">Skills Catalog</a>
           <a href="https://github.com/anksarvesh-lgtm/agent-guard/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">License (Apache 2.0)</a>
           <a href="https://github.com/anksarvesh-lgtm/agent-guard/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer">Security</a>
@@ -466,5 +607,6 @@
   </footer>
 
   <script src="/js/guard.js"></script>
+  <script src="/js/github-releases.js"></script>
 </body>
 </html>

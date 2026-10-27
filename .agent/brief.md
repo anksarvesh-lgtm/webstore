@@ -1,12 +1,12 @@
-<!-- BRIEF: COMMIT=053b02a3 HASH=079dbe1a DATE=2026-10-27T08:30:42.785Z -->
+<!-- BRIEF: COMMIT=e9186e72 HASH=72872e19 DATE=2026-10-27T08:34:47.822Z -->
 # Project Brief: web
-- **Commit**: `053b02a3` | **Updated**: 2026-10-27T08:30:42.785Z | **Files Tracked**: 59
+- **Commit**: `e9186e72` | **Updated**: 2026-10-27T08:34:47.822Z | **Files Tracked**: 51
 
 ## Overview
 No README.md found.
 
 ## Tech Stack
-- Node.js / JavaScript/TypeScript (name: purge-mac-replica)
+- Node.js / JavaScript/TypeScript (name: dynamo-and-agent-guard)
 
 ## Project Map (Directory Tree)
 ```text
@@ -16,17 +16,18 @@ No README.md found.
 │   ├── agent-guard/ (6 files)
 │   └── dynamo/ (2 files)
 ├── css/ (3 files)
-├── js/ (3 files)
-├── public/ (29 files)
+├── fonts/ (7 files)
+├── js/ (2 files)
+├── public/ (18 files)
 │   ├── agent-guard/ (6 files)
-│   ├── clears/ (4 files)
 │   ├── dynamo/ (2 files)
 │   └── fonts/ (7 files)
-├── src-analysis/ (6 files)
-│   └── chunks/ (3 files)
 ├── agent-guard.html
+├── apple-touch-icon.png
 ├── dynamo.html
+├── favicon.ico
 ├── index.html
+├── og-image-v2.png
 ├── package.json
 └── server.js
 ```
@@ -40,7 +41,6 @@ graph TD
 
 ## Likely Entry Points
 - `index.html`
-- `js/main.js`
 - `server.js`
 
 ## Key Commands

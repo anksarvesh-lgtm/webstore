@@ -1,52 +1,52 @@
 {
   "version": 1,
-  "task_id": "t-20261027-9732",
-  "goal": "Remove all Purge Mac files, assets, and references, establishing LiquidDynamo and Agent Guard as the dedicated web hub",
+  "task_id": "t-20261027-2024",
+  "goal": "Integrate direct GitHub releases 1-click download, and add short highlighted README and Changelog sections to the web pages",
   "status": "active",
-  "created_at": "2026-10-27T08:30:54.393Z",
-  "updated_at": "2026-10-27T08:31:48.855Z",
-  "checkpoint_count": 3,
+  "created_at": "2026-10-27T08:35:38.749Z",
+  "updated_at": "2026-10-27T08:36:05.362Z",
+  "checkpoint_count": 1,
   "steps": [
     {
       "id": "s1",
-      "title": "Delete Purge-specific files, videos, analysis chunks, and logos",
+      "title": "Create client GitHub integration script for dynamic 1-click download link resolution",
       "status": "done",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [],
-      "note": "Deleted all Purge Mac static files (logos, demo videos, clears SVGs, latest-release.js, purge-analytics.js, and src-analysis).",
+      "note": "Created js/github-releases.js for dynamic GitHub release asset resolution, 1-click DMG download binding, and version tagging.",
       "last_error": null,
-      "updated_at": "2026-10-27T08:31:10.057Z"
+      "updated_at": "2026-10-27T08:36:05.362Z"
     },
     {
       "id": "s2",
-      "title": "Replace index.html with LiquidDynamo as the primary homepage",
-      "status": "done",
+      "title": "Add README Highlights and architecture breakdown sections to index.html and agent-guard.html",
+      "status": "pending",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [
         "s1"
       ],
-      "note": "Replaced index.html with LiquidDynamo as the primary flagship homepage with clean navigation to Agent Guard and zero references to Purge.",
+      "note": null,
       "last_error": null,
-      "updated_at": "2026-10-27T08:31:41.755Z"
+      "updated_at": "2026-10-27T08:35:38.749Z"
     },
     {
       "id": "s3",
-      "title": "Update dynamo.html and agent-guard.html navigation to link between the two products",
-      "status": "done",
+      "title": "Add scannable Changelog and release milestones sections with version badges",
+      "status": "pending",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [
         "s2"
       ],
-      "note": "Updated dynamo.html and agent-guard.html headers, switcher pills, and footers to link symmetrically between LiquidDynamo and Agent Guard without Purge.",
+      "note": null,
       "last_error": null,
-      "updated_at": "2026-10-27T08:31:48.855Z"
+      "updated_at": "2026-10-27T08:35:38.749Z"
     },
     {
       "id": "s4",
-      "title": "Update package.json metadata and verify clean HTTP responses on port 3000",
+      "title": "Verify 1-click download links, changelog interactions, and live responsiveness on port 3000",
       "status": "pending",
       "tries": 0,
       "max_tries": 3,
@@ -55,7 +55,7 @@
       ],
       "note": null,
       "last_error": null,
-      "updated_at": "2026-10-27T08:30:54.393Z"
+      "updated_at": "2026-10-27T08:35:38.749Z"
     }
   ]
 }
