@@ -4,19 +4,19 @@
   "goal": "Build high-fidelity landing pages in the purgemac.com design aesthetic for LiquidDynamo and Agent Guard",
   "status": "active",
   "created_at": "2026-10-27T08:18:26.266Z",
-  "updated_at": "2026-10-27T08:18:26.266Z",
-  "checkpoint_count": 0,
+  "updated_at": "2026-10-27T08:18:48.602Z",
+  "checkpoint_count": 1,
   "steps": [
     {
       "id": "s1",
       "title": "Inspect full feature sets, technical specs, and install commands for dynamo-mac and agent-guard",
-      "status": "in_progress",
+      "status": "done",
       "tries": 0,
       "max_tries": 3,
       "depends_on": [],
-      "note": null,
+      "note": "Inspected complete technical architectures, one-line install scripts, Swift/Metal engines, 12 LiquidDynamo modules, and 7 Agent Guard core pillars across both repositories.",
       "last_error": null,
-      "updated_at": "2026-10-27T08:18:26.266Z"
+      "updated_at": "2026-10-27T08:18:48.602Z"
     },
     {
       "id": "s2",
