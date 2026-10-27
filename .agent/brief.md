@@ -1,12 +1,12 @@
-<!-- BRIEF: COMMIT=d9f0ea6f HASH=a220bc37 DATE=2026-10-27T08:56:01.137Z -->
+<!-- BRIEF: COMMIT=c9051538 HASH=a220bc37 DATE=2026-10-27T09:20:50.576Z -->
 # Project Brief: web
-- **Commit**: `d9f0ea6f` | **Updated**: 2026-10-27T08:56:01.137Z | **Files Tracked**: 53
+- **Commit**: `c9051538` | **Updated**: 2026-10-27T09:20:50.576Z | **Files Tracked**: 53
 
 ## Overview
 No README.md found.
 
 ## Tech Stack
-- Node.js / JavaScript/TypeScript (name: dynamo-and-agent-guard)
+- Node.js / JavaScript/TypeScript (name: webstore)
 
 ## Project Map (Directory Tree)
 ```text
