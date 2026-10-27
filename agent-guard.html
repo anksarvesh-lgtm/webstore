@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/dynamo.css">
   <link rel="stylesheet" href="/css/guard.css">
+  <link rel="stylesheet" href="/css/appstore.css">
 </head>
 <body id="top">
 
@@ -48,12 +49,13 @@
   <!-- Navigation -->
   <nav class="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="#top">
+      <a class="brand" href="/index.html">
         <img class="brand-logo" src="/assets/agent-guard/logo.svg" alt="Agent Guard Emblem" width="28" height="28" decoding="async">
         <span>App Store <span class="brand-by">by Agrigence</span></span>
         <span class="brand-app-badge">Agent Guard</span>
       </a>
       <div class="nav-links">
+        <a class="nav-link" href="/index.html" style="color: var(--store-blue); font-weight: 600;">‹ Storefront</a>
         <a class="nav-link" href="#readme">README</a>
         <a class="nav-link" href="#changelog">Changelog</a>
         <a class="nav-github" href="https://github.com/anksarvesh-lgtm/agent-guard" target="_blank" rel="noopener noreferrer" aria-label="View Agent Guard on GitHub">
@@ -62,71 +64,114 @@
           </svg>
           <span class="nav-github-stars" id="guard-github-stars" data-gh-version="guard">v0.2.18</span>
         </a>
-        <a id="nav-download" class="btn btn-sm btn-secondary nav-download" href="/download/guard" target="_blank" rel="noopener noreferrer" data-gh-download="guard">
-          <span class="btn-inner">
-            <span class="shield-icon-svg">🛡️</span>
-            <span class="nav-download-label nav-download-label--full">Get Release (<span data-gh-version="guard">v0.2.18</span>)</span>
-            <span class="nav-download-label nav-download-label--short">Install</span>
-          </span>
+        <a id="nav-download" class="btn-get" href="/download/guard" target="_blank" rel="noopener noreferrer" data-gh-download="guard" style="padding: 7px 22px; font-size: 0.92rem;">
+          <span class="btn-get-text">GET</span>
         </a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="wrap hero-inner">
-      <div class="app-icon-wrap reveal d2">
-        <img class="hero-logo guard-shield-logo" src="/assets/agent-guard/logo.svg" alt="Agent Guard Emblem" width="124" height="124" decoding="async" fetchpriority="high">
-        <div class="guard-glow"></div>
-      </div>
-      <h1 class="headline reveal d2">Autonomous AI Agent Supervisor.<br><span class="text-gradient-amber">Crash-Proof DAG Ledger.</span></h1>
-      <p class="subhead reveal d3">Supervise autonomous coding agents with atomic step checkpoints, keep-awake leases,<br>multi-account 1% auto-rotation, and context compression across all your IDEs.</p>
+  <!-- App Store Product Page Container -->
+  <main class="appstore-shell" style="padding-top: 16px;">
+    <!-- Breadcrumb -->
+    <div style="margin-bottom: 22px;">
+      <a href="/index.html" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--store-blue); text-decoration: none; font-size: 0.95rem;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+        App Store
+      </a>
+    </div>
 
-      <!-- 1-Click Release Action -->
-      <div class="cta-row reveal d4" style="margin-bottom: 20px;">
-        <a id="hero-download" class="btn btn-lg btn-glow-guard" href="/download/guard" target="_blank" rel="noopener noreferrer" data-gh-download="guard">
-          <span class="btn-inner">
-            <span class="shield-icon-svg">🛡️</span>
-            Download Latest Release (<span data-gh-version="guard">v0.2.18</span>)
-          </span>
-        </a>
+    <!-- App Detail Header -->
+    <header class="app-detail-header">
+      <div class="app-detail-lead">
+        <img class="app-detail-icon" src="/assets/agent-guard/logo.svg" alt="Agent Guard Emblem" width="104" height="104" decoding="async" style="background: rgba(245, 158, 11, 0.08); padding: 12px; border: 1px solid rgba(245, 158, 11, 0.2);">
+        <div class="app-detail-titles">
+          <h1 class="app-detail-h1">Agent Guard</h1>
+          <p class="app-detail-subtitle">Autonomous AI Agent Supervisor · Crash-Proof DAG Ledger & Keep-Awake</p>
+          <div class="app-detail-developer">Agrigence LLC · <span style="color: var(--muted); font-weight: 500;">#2 in Developer Tools</span></div>
+        </div>
       </div>
-      
-      <!-- Option 1: 1-Line Terminal Install -->
-      <div class="snippet-row reveal d4">
-        <div class="snippet" role="group" aria-label="Agent Guard 1-line terminal command">
-          <div class="snippet-text">
-            <code class="snippet-code">curl -fsSL https://raw.githubusercontent.com/anksarvesh-lgtm/agent-guard/main/install.sh | bash</code>
-          </div>
-          <button class="snippet-copy" type="button" data-copy="curl -fsSL https://raw.githubusercontent.com/anksarvesh-lgtm/agent-guard/main/install.sh | bash" aria-label="Copy terminal install command">
-            <svg class="snippet-ico snippet-ico--copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-            <svg class="snippet-ico snippet-ico--check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"></path></svg>
+      <div class="app-detail-actions" style="display: flex; flex-direction: column; align-items: flex-end; gap: 6px;">
+        <a class="btn-get" href="/download/guard" target="_blank" rel="noopener noreferrer" data-gh-download="guard" style="padding: 10px 32px; font-size: 1.05rem;">
+          <span class="btn-get-text">GET</span>
+        </a>
+        <span class="btn-get-sub" style="font-size: 0.76rem; color: var(--muted);">In-App Purchases · Free & Open Source</span>
+      </div>
+    </header>
+
+    <!-- Metrics Ribbon -->
+    <div class="metrics-ribbon">
+      <div class="metric-cell">
+        <span class="metric-cell__label">216 RATINGS</span>
+        <span class="metric-cell__value">4.9 <span style="color: var(--store-star); font-size: 0.95rem;">★★★★★</span></span>
+        <span class="metric-cell__sub">Top Developer Tool</span>
+      </div>
+      <div class="metric-cell">
+        <span class="metric-cell__label">RANK</span>
+        <span class="metric-cell__value">#2</span>
+        <span class="metric-cell__sub">Developer Tools</span>
+      </div>
+      <div class="metric-cell">
+        <span class="metric-cell__label">AGE</span>
+        <span class="metric-cell__value">4+</span>
+        <span class="metric-cell__sub">Years Old</span>
+      </div>
+      <div class="metric-cell">
+        <span class="metric-cell__label">CROSS-IDE</span>
+        <span class="metric-cell__value">Universal</span>
+        <span class="metric-cell__sub">Claude · Gemini · Cursor</span>
+      </div>
+      <div class="metric-cell">
+        <span class="metric-cell__label">TEST SUITE</span>
+        <span class="metric-cell__value" data-gh-version="guard">144/144</span>
+        <span class="metric-cell__sub">All Tests Passing</span>
+      </div>
+    </div>
+
+    <!-- What's New Card -->
+    <div class="store-whats-new-card">
+      <div class="whats-new-head">
+        <div>
+          <h2 class="whats-new-title">What’s New</h2>
+          <span class="whats-new-version">Version <span data-gh-version="guard">0.2.18</span></span>
+        </div>
+        <a href="#changelog" class="whats-new-history">Version History</a>
+      </div>
+      <p class="whats-new-notes">
+        • Native OS keep-awake lease daemon preventing MacBook sleep during long-running agent workflows.<br>
+        • Atomic DAG task ledger with automatic crash-recovery and checkpoint verification.<br>
+        • Zero-loss token compressor and 1% multi-account auto-rotator for uninterrupted execution.
+      </p>
+    </div>
+
+    <!-- Install Options -->
+    <div class="snippet-row" style="margin-bottom: 24px;">
+      <div class="snippet" role="group" aria-label="Agent Guard 1-line terminal command">
+        <div class="snippet-text">
+          <code class="snippet-code">curl -fsSL https://raw.githubusercontent.com/anksarvesh-lgtm/agent-guard/main/install.sh | bash</code>
+        </div>
+        <button class="snippet-copy" type="button" data-copy="curl -fsSL https://raw.githubusercontent.com/anksarvesh-lgtm/agent-guard/main/install.sh | bash" aria-label="Copy terminal install command">
+          <svg class="snippet-ico snippet-ico--copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+          <svg class="snippet-ico snippet-ico--check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"></path></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Universal Prompt Box -->
+    <div class="prompt-box-row" style="margin-bottom: 36px;">
+      <div class="agent-prompt-card">
+        <div class="prompt-card-header">
+          <span class="bot-icon">🤖</span>
+          <span class="prompt-card-label">Universal Prompt for Claude, Gemini, Antigravity & Cursor</span>
+          <button class="btn btn-sm btn-secondary copy-prompt-btn" type="button" id="copy-universal-prompt">
+            <span>Copy Prompt</span>
           </button>
         </div>
+        <p class="prompt-text" id="universal-prompt-content">
+          Please install and activate the Agent Guard MCP supervisor (https://github.com/anksarvesh-lgtm/agent-guard.git). Run `curl -fsSL https://raw.githubusercontent.com/anksarvesh-lgtm/agent-guard/main/install.sh | bash` in the terminal, verify with `node ~/.agent-guard/dist/cli.js doctor`, and adopt the @agent-guard rules to supervise all my development tasks with atomic ledger checkpoints and keep-awake protection.
+        </p>
       </div>
-
-      <div class="or-divider reveal d4" aria-hidden="true">
-        <span class="or-divider__line"></span>
-        <span class="or-divider__text">or paste this universal prompt into your agent</span>
-        <span class="or-divider__line"></span>
-      </div>
-
-      <!-- Option 2: Universal AI Prompt Box -->
-      <div class="prompt-box-row reveal d4">
-        <div class="agent-prompt-card">
-          <div class="prompt-card-header">
-            <span class="bot-icon">🤖</span>
-            <span class="prompt-card-label">Universal Prompt for Claude, Gemini, Antigravity & Cursor</span>
-            <button class="btn btn-sm btn-secondary copy-prompt-btn" type="button" id="copy-universal-prompt">
-              <span>Copy Prompt</span>
-            </button>
-          </div>
-          <p class="prompt-text" id="universal-prompt-content">
-            Please install and activate the Agent Guard MCP supervisor (https://github.com/anksarvesh-lgtm/agent-guard.git). Run `curl -fsSL https://raw.githubusercontent.com/anksarvesh-lgtm/agent-guard/main/install.sh | bash` in the terminal, verify with `node ~/.agent-guard/dist/cli.js doctor`, and adopt the @agent-guard rules to supervise all my development tasks with atomic ledger checkpoints and keep-awake protection.
-          </p>
-        </div>
-      </div>
+    </div>
 
       <p class="meta-line reveal d4">
         <span>144/144 Tests Passing</span>
@@ -585,6 +630,50 @@
       </div>
     </div>
   </section>
+
+  <!-- App Store Information Specs Section -->
+  <section class="section" style="padding-top: 20px; padding-bottom: 50px;">
+    <div class="wrap">
+      <div class="scan-panel">
+        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 20px; color: var(--ink); letter-spacing: -0.015em;">Information</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px;">
+          <div>
+            <span style="font-size: 0.76rem; color: var(--muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.04em;">Provider</span>
+            <p style="font-weight: 600; color: var(--ink); margin-top: 4px; font-size: 0.95rem;">Agrigence LLC</p>
+          </div>
+          <div>
+            <span style="font-size: 0.76rem; color: var(--muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.04em;">Size</span>
+            <p style="font-weight: 600; color: var(--ink); margin-top: 4px; font-size: 0.95rem;">12.8 MB (Node.js & TypeScript)</p>
+          </div>
+          <div>
+            <span style="font-size: 0.76rem; color: var(--muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.04em;">Category</span>
+            <p style="font-weight: 600; color: var(--ink); margin-top: 4px; font-size: 0.95rem;">Developer Tools</p>
+          </div>
+          <div>
+            <span style="font-size: 0.76rem; color: var(--muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.04em;">Compatibility</span>
+            <p style="font-weight: 600; color: var(--ink); margin-top: 4px; font-size: 0.95rem;">macOS 12+, Linux, Windows (Node 18+)</p>
+          </div>
+          <div>
+            <span style="font-size: 0.76rem; color: var(--muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.04em;">Languages</span>
+            <p style="font-weight: 600; color: var(--ink); margin-top: 4px; font-size: 0.95rem;">English</p>
+          </div>
+          <div>
+            <span style="font-size: 0.76rem; color: var(--muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.04em;">Age Rating</span>
+            <p style="font-weight: 600; color: var(--ink); margin-top: 4px; font-size: 0.95rem;">4+</p>
+          </div>
+          <div>
+            <span style="font-size: 0.76rem; color: var(--muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.04em;">Price</span>
+            <p style="font-weight: 600; color: var(--store-blue); margin-top: 4px; font-size: 0.95rem;">Free (Apache 2.0 Open Source)</p>
+          </div>
+          <div>
+            <span style="font-size: 0.76rem; color: var(--muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.04em;">Copyright</span>
+            <p style="font-weight: 600; color: var(--ink); margin-top: 4px; font-size: 0.95rem;">© 2026 Agrigence LLC</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">

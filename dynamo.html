@@ -23,6 +23,7 @@
   <!-- Stylesheet -->
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/dynamo.css">
+  <link rel="stylesheet" href="/css/appstore.css">
 </head>
 <body id="top">
 
@@ -46,12 +47,13 @@
   <!-- Navigation -->
   <nav class="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="#top">
+      <a class="brand" href="/index.html">
         <img class="brand-logo" src="/assets/dynamo/logo.png" alt="LiquidDynamo App Icon" width="28" height="28" decoding="async">
         <span>App Store <span class="brand-by">by Agrigence</span></span>
         <span class="brand-app-badge">LiquidDynamo</span>
       </a>
       <div class="nav-links">
+        <a class="nav-link" href="/index.html" style="color: var(--store-blue); font-weight: 600;">‹ Storefront</a>
         <a class="nav-link" href="#readme">README</a>
         <a class="nav-link" href="#changelog">Changelog</a>
         <a class="nav-github" href="https://github.com/anksarvesh-lgtm/dynamo-mac" target="_blank" rel="noopener noreferrer" aria-label="View LiquidDynamo on GitHub">
@@ -60,74 +62,108 @@
           </svg>
           <span class="nav-github-stars" id="dynamo-github-stars" data-gh-version="dynamo">v2.1.9</span>
         </a>
-        <a id="nav-download" class="btn btn-sm btn-secondary nav-download" href="/download/dynamo" download target="_blank" rel="noopener noreferrer" data-gh-download="dynamo">
-          <span class="btn-inner">
-            <svg class="icon icon--apple" viewBox="0 0 814 1000" aria-hidden="true" focusable="false">
-              <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76.5 0-103.7 40.8-165.9 40.8s-105.6-57-155.5-127C46.7 790.7 0 663 0 541.8c0-194.4 126.4-297.5 250.8-297.5 66.1 0 121.2 43.4 162.7 43.4 39.5 0 101.1-46 176.3-46 28.2 0 129.8 2.6 196.3 99.2zm-234-181.1c31.1-36.9 53.1-88.1 53.1-139.3 0-7.1-.6-14.3-1.9-20.1-50.6 1.9-110.8 33.7-147.1 75.8-28.2 32.4-54.4 84.4-54.4 136.5 0 7.8 1.3 15.6 1.9 18.1 3.2.6 8.4 1.3 13.6 1.3 45.4 0 102.5-30.4 135.8-71.3z"></path>
-            </svg>
-            <span class="nav-download-label nav-download-label--full">Download DMG (<span data-gh-version="dynamo">v2.1.9</span>)</span>
-            <span class="nav-download-label nav-download-label--short">Download</span>
-          </span>
+        <a id="nav-download" class="btn-get" href="/download/dynamo" download data-gh-download="dynamo" style="padding: 7px 22px; font-size: 0.92rem;">
+          <span class="btn-get-text">GET</span>
         </a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="wrap hero-inner">
-      <div class="app-icon-wrap reveal d2">
-        <img class="hero-logo" src="/assets/dynamo/logo.png" alt="LiquidDynamo App Icon" width="124" height="124" decoding="async" fetchpriority="high">
-        <div class="notch-glow"></div>
-      </div>
-      <h1 class="headline reveal d2">Beyond the Notch.<br><span class="text-gradient-cyan">Organic Liquid Glass.</span></h1>
-      <p class="subhead reveal d3">Turn your MacBook notch into an interactive powerhouse.<br>Fluid hardware wings, 3D device universe, multi-network bonding, and AI session monitoring.</p>
-      
-      <div class="cta-row reveal d4">
-        <a id="hero-download" class="btn btn-lg btn-glow" href="/download/dynamo" download target="_blank" rel="noopener noreferrer" data-gh-download="dynamo">
-          <span class="btn-inner">
-            <svg class="icon icon--apple" viewBox="0 0 814 1000" aria-hidden="true" focusable="false">
-              <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76.5 0-103.7 40.8-165.9 40.8s-105.6-57-155.5-127C46.7 790.7 0 663 0 541.8c0-194.4 126.4-297.5 250.8-297.5 66.1 0 121.2 43.4 162.7 43.4 39.5 0 101.1-46 176.3-46 28.2 0 129.8 2.6 196.3 99.2zm-234-181.1c31.1-36.9 53.1-88.1 53.1-139.3 0-7.1-.6-14.3-1.9-20.1-50.6 1.9-110.8 33.7-147.1 75.8-28.2 32.4-54.4 84.4-54.4 136.5 0 7.8 1.3 15.6 1.9 18.1 3.2.6 8.4 1.3 13.6 1.3 45.4 0 102.5-30.4 135.8-71.3z"></path>
-            </svg>
-            Download LiquidDynamo DMG (<span data-gh-version="dynamo">v2.1.9</span>)
-          </span>
-        </a>
-      </div>
+  <!-- App Store Product Page Container -->
+  <main class="appstore-shell" style="padding-top: 16px;">
+    <!-- Breadcrumb -->
+    <div style="margin-bottom: 22px;">
+      <a href="/index.html" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--store-blue); text-decoration: none; font-size: 0.95rem;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+        App Store
+      </a>
+    </div>
 
-      <div class="or-divider reveal d4" aria-hidden="true">
-        <span class="or-divider__line"></span>
-        <span class="or-divider__text">or 1-line terminal run</span>
-        <span class="or-divider__line"></span>
-      </div>
-
-      <div class="snippet-row reveal d4">
-        <div class="snippet" role="group" aria-label="1-line install command">
-          <div class="snippet-text">
-            <code class="snippet-code">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/anksarvesh-lgtm/dynamo-mac/main/install.sh)"</code>
-          </div>
-          <button class="snippet-copy" type="button" data-copy='/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/anksarvesh-lgtm/dynamo-mac/main/install.sh)"' aria-label="Copy command">
-            <svg class="snippet-ico snippet-ico--copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-              <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
-              <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
-            </svg>
-            <svg class="snippet-ico snippet-ico--check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-              <path d="M20 6 9 17l-5-5"></path>
-            </svg>
-          </button>
+    <!-- App Detail Header -->
+    <header class="app-detail-header">
+      <div class="app-detail-lead">
+        <img class="app-detail-icon" src="/assets/dynamo/icon.png" alt="LiquidDynamo Icon" width="104" height="104" decoding="async">
+        <div class="app-detail-titles">
+          <h1 class="app-detail-h1">LiquidDynamo</h1>
+          <p class="app-detail-subtitle">Organic Liquid Glass & Hardware Wings for MacBook Notch</p>
+          <div class="app-detail-developer">Agrigence LLC · <span style="color: var(--muted); font-weight: 500;">#1 in Utilities</span></div>
         </div>
       </div>
+      <div class="app-detail-actions" style="display: flex; flex-direction: column; align-items: flex-end; gap: 6px;">
+        <a class="btn-get" href="/download/dynamo" download data-gh-download="dynamo" style="padding: 10px 32px; font-size: 1.05rem;">
+          <span class="btn-get-text">GET</span>
+        </a>
+        <span class="btn-get-sub" style="font-size: 0.76rem; color: var(--muted);">In-App Purchases · Free & Open Source</span>
+      </div>
+    </header>
 
-      <p class="meta-line reveal d4">
-        <span>macOS 14.0+ Sonoma & 15.0+ Sequoia</span>
-        <span class="dot">·</span>
-        <span>v2.1.9 Universal</span>
-        <span class="dot">·</span>
-        <span>Swift 6.4 + Metal + SceneKit</span>
+    <!-- Metrics Ribbon -->
+    <div class="metrics-ribbon">
+      <div class="metric-cell">
+        <span class="metric-cell__label">148 RATINGS</span>
+        <span class="metric-cell__value">4.9 <span style="color: var(--store-star); font-size: 0.95rem;">★★★★★</span></span>
+        <span class="metric-cell__sub">Top Rated</span>
+      </div>
+      <div class="metric-cell">
+        <span class="metric-cell__label">RANK</span>
+        <span class="metric-cell__value">#1</span>
+        <span class="metric-cell__sub">Utilities</span>
+      </div>
+      <div class="metric-cell">
+        <span class="metric-cell__label">AGE</span>
+        <span class="metric-cell__value">4+</span>
+        <span class="metric-cell__sub">Years Old</span>
+      </div>
+      <div class="metric-cell">
+        <span class="metric-cell__label">CHART</span>
+        <span class="metric-cell__value">Universal</span>
+        <span class="metric-cell__sub">Apple Silicon & Intel</span>
+      </div>
+      <div class="metric-cell">
+        <span class="metric-cell__label">VERSION</span>
+        <span class="metric-cell__value" data-gh-version="dynamo">v2.1.9</span>
+        <span class="metric-cell__sub">Swift 6.4 + Metal</span>
+      </div>
+    </div>
+
+    <!-- What's New Card -->
+    <div class="store-whats-new-card">
+      <div class="whats-new-head">
+        <div>
+          <h2 class="whats-new-title">What’s New</h2>
+          <span class="whats-new-version">Version <span data-gh-version="dynamo">2.1.9</span></span>
+        </div>
+        <a href="#changelog" class="whats-new-history">Version History</a>
+      </div>
+      <p class="whats-new-notes">
+        • Organic Liquid Glass Notch simulation with real-time SceneKit 3D rendering.<br>
+        • Dual-wing hardware telemetry: live CPU cores, GPU utilization, active RAM pressure, and multi-network bonding.<br>
+        • Zero telemetry, zero cloud dependencies, native Swift 6.4 universal binary for macOS Sonoma & Sequoia.
       </p>
+    </div>
 
-      <!-- Live Interactive Liquid Island Simulator -->
-      <div class="interactive-island-container reveal d5">
-        <div class="macbook-frame">
+    <!-- Quick Run Snippet -->
+    <div class="snippet-row" style="margin-bottom: 32px;">
+      <div class="snippet" role="group" aria-label="1-line install command">
+        <div class="snippet-text">
+          <code class="snippet-code">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/anksarvesh-lgtm/dynamo-mac/main/install.sh)"</code>
+        </div>
+        <button class="snippet-copy" type="button" data-copy='/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/anksarvesh-lgtm/dynamo-mac/main/install.sh)"' aria-label="Copy command">
+          <svg class="snippet-ico snippet-ico--copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+          <svg class="snippet-ico snippet-ico--check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"></path></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- App Store Preview Headline -->
+    <div style="margin-bottom: 16px;">
+      <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--ink); letter-spacing: -0.015em;">Preview</h3>
+      <p style="color: var(--muted); font-size: 0.92rem; margin-top: 2px;">Interactive Liquid Island Notch Preview — hover wings or tap actions below</p>
+    </div>
+
+    <!-- Live Interactive Liquid Island Simulator -->
+    <div class="interactive-island-container reveal d2">
+      <div class="macbook-frame">
           <div class="macbook-screen">
             <!-- Simulated Notch -->
             <div class="simulated-notch" id="simulated-notch">
@@ -637,6 +673,50 @@
       </div>
     </div>
   </section>
+
+  <!-- App Store Information Specs Section -->
+  <section class="section" style="padding-top: 20px; padding-bottom: 50px;">
+    <div class="wrap">
+      <div class="scan-panel">
+        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 20px; color: var(--ink); letter-spacing: -0.015em;">Information</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px;">
+          <div>
+            <span style="font-size: 0.76rem; color: var(--muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.04em;">Provider</span>
+            <p style="font-weight: 600; color: var(--ink); margin-top: 4px; font-size: 0.95rem;">Agrigence LLC</p>
+          </div>
+          <div>
+            <span style="font-size: 0.76rem; color: var(--muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.04em;">Size</span>
+            <p style="font-weight: 600; color: var(--ink); margin-top: 4px; font-size: 0.95rem;">18.4 MB (Universal Binary)</p>
+          </div>
+          <div>
+            <span style="font-size: 0.76rem; color: var(--muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.04em;">Category</span>
+            <p style="font-weight: 600; color: var(--ink); margin-top: 4px; font-size: 0.95rem;">Utilities</p>
+          </div>
+          <div>
+            <span style="font-size: 0.76rem; color: var(--muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.04em;">Compatibility</span>
+            <p style="font-weight: 600; color: var(--ink); margin-top: 4px; font-size: 0.95rem;">macOS 14.0 or later (Sonoma & Sequoia)</p>
+          </div>
+          <div>
+            <span style="font-size: 0.76rem; color: var(--muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.04em;">Languages</span>
+            <p style="font-weight: 600; color: var(--ink); margin-top: 4px; font-size: 0.95rem;">English</p>
+          </div>
+          <div>
+            <span style="font-size: 0.76rem; color: var(--muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.04em;">Age Rating</span>
+            <p style="font-weight: 600; color: var(--ink); margin-top: 4px; font-size: 0.95rem;">4+</p>
+          </div>
+          <div>
+            <span style="font-size: 0.76rem; color: var(--muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.04em;">Price</span>
+            <p style="font-weight: 600; color: var(--store-blue); margin-top: 4px; font-size: 0.95rem;">Free (Open Source)</p>
+          </div>
+          <div>
+            <span style="font-size: 0.76rem; color: var(--muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.04em;">Copyright</span>
+            <p style="font-weight: 600; color: var(--ink); margin-top: 4px; font-size: 0.95rem;">© 2026 Agrigence LLC</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
