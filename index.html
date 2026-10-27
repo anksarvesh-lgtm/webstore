@@ -48,6 +48,8 @@
       <div class="nav-links">
         <a class="nav-link" href="#featured">Featured</a>
         <a class="nav-link" href="#charts">Top Charts</a>
+        <a class="nav-link" href="#platform-sections">Platforms</a>
+        <a class="nav-link" href="#category-sections">Categories</a>
         <a class="nav-link" href="#updates">Updates</a>
         <a class="nav-github" href="https://github.com/anksarvesh-lgtm/webstore" target="_blank" rel="noopener noreferrer" aria-label="View App Store on GitHub">
           <svg class="icon icon--github" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -77,10 +79,29 @@
 
         <nav class="store-nav-tabs" aria-label="App Store Categories">
           <a href="#discover" class="store-tab-btn active" data-store-tab="discover">🌟 Discover</a>
-          <a href="#utilities" class="store-tab-btn" data-store-tab="utilities">🚀 Mac Utilities</a>
-          <a href="#dev-tools" class="store-tab-btn" data-store-tab="dev-tools">🛡️ Developer Tools</a>
+          <a href="#platform-macos" class="store-tab-btn" data-store-tab="platform-macos"> macOS Native</a>
+          <a href="#platform-cli" class="store-tab-btn" data-store-tab="platform-cli">⌨️ CLI & Agents</a>
+          <a href="#type-utilities" class="store-tab-btn" data-store-tab="type-utilities">🚀 System Utilities</a>
+          <a href="#type-devtools" class="store-tab-btn" data-store-tab="type-devtools">🛡️ Developer Tools</a>
           <a href="#updates" class="store-tab-btn" data-store-tab="updates">🔄 Updates</a>
         </nav>
+      </div>
+
+      <!-- Quick Platform & Type Filter Pill Controls -->
+      <div class="store-quick-filters" aria-label="Quick Filters">
+        <div class="quick-filter-group">
+          <span class="quick-filter-label">Platform:</span>
+          <button type="button" class="quick-filter-pill active" data-filter-group="platform" data-filter-value="all">All Platforms</button>
+          <button type="button" class="quick-filter-pill" data-filter-group="platform" data-filter-value="macos"> macOS Native</button>
+          <button type="button" class="quick-filter-pill" data-filter-group="platform" data-filter-value="cli">⌨️ CLI & Agents</button>
+        </div>
+        <div class="quick-filter-divider"></div>
+        <div class="quick-filter-group">
+          <span class="quick-filter-label">Type:</span>
+          <button type="button" class="quick-filter-pill active" data-filter-group="type" data-filter-value="all">All Types</button>
+          <button type="button" class="quick-filter-pill" data-filter-group="type" data-filter-value="utilities">🚀 System Utilities</button>
+          <button type="button" class="quick-filter-pill" data-filter-group="type" data-filter-value="devtools">🛡️ Developer Tools</button>
+        </div>
       </div>
     </header>
 
@@ -242,99 +263,372 @@
       </div>
     </section>
 
-    <!-- Section: Interactive Test Flight -->
-    <section class="store-shelf" id="test-flight" data-tab-section="utilities">
-      <div class="store-shelf-head">
-        <div>
-          <h2 class="shelf-title">Interactive Test Flight: LiquidDynamo</h2>
-          <p style="color: var(--muted); font-size: 0.9rem; margin-top: 2px;">Experience the fluid spring physics and live hardware wings right inside the store</p>
+    <!-- ========================================== -->
+    <!-- SECTION GROUP: BROWSE BY PLATFORM          -->
+    <!-- ========================================== -->
+    <div id="platform-sections">
+      
+      <!-- Platform 1: macOS Native Applications -->
+      <section class="store-shelf platform-shelf" id="platform-macos" data-tab-section="discover platform-macos" data-platform-group="macos" data-type-group="utilities">
+        <div class="store-shelf-head">
+          <div>
+            <div class="shelf-badge-row">
+              <span class="platform-tag macos"> macOS Native</span>
+              <span class="architecture-tag">Apple Silicon (M1-M4) & Intel</span>
+            </div>
+            <h2 class="shelf-title">macOS Native Applications</h2>
+            <p style="color: var(--muted); font-size: 0.9rem; margin-top: 2px;">Natively compiled with Swift 6, Metal 3, and SceneKit for peak Apple Silicon efficiency</p>
+          </div>
+          <a href="/dynamo.html" class="shelf-see-all">View macOS Catalog →</a>
         </div>
-        <a href="/dynamo.html" class="shelf-see-all">Full Product Page →</a>
-      </div>
 
-      <!-- Live Interactive Liquid Island Simulator -->
-      <div class="interactive-island-container" style="margin-top: 10px;">
-        <div class="macbook-frame">
-          <div class="macbook-screen">
-            <!-- Simulated Notch -->
-            <div class="simulated-notch" id="simulated-notch">
-              <div class="notch-hardware">
-                <span class="camera-lens"></span>
-                <span class="camera-indicator"></span>
-              </div>
-              
-              <!-- Left Notch Wing -->
-              <div class="notch-wing wing-left" id="wing-left">
-                <div class="wing-metric">
-                  <span class="metric-label">CPU</span>
-                  <div class="metric-bar-bg"><div class="metric-bar-fill" style="width: 38%;"></div></div>
-                  <span class="metric-val">38%</span>
+        <div class="platform-showcase-grid">
+          <article class="platform-card" data-store-app="dynamo" data-app-url="/dynamo.html" data-store-keywords="liquiddynamo notch dynamic island macbook hardware metal swift macos apple silicon">
+            <div class="platform-card-main">
+              <div class="platform-card-header">
+                <a href="/dynamo.html" class="platform-icon-wrap">
+                  <img class="platform-app-icon" src="/assets/dynamo/logo.png" alt="LiquidDynamo" width="64" height="64" decoding="async">
+                </a>
+                <div class="platform-meta">
+                  <div class="platform-eyebrow cyan">macOS SONOMA 14+ & SEQUOIA 15+</div>
+                  <h3 class="platform-app-title"><a href="/dynamo.html" class="platform-title-link">LiquidDynamo</a></h3>
+                  <p class="platform-app-tagline">Dynamic Notch Hardware Wings, Fluid Spring Physics & 3D Device Universe</p>
+                  <div class="chart-rating-row" style="margin-top: 4px;">
+                    <span class="star-rating">★★★★★</span>
+                    <span>4.9 (142 ratings)</span>
+                    <span>·</span>
+                    <span class="category-badge">Mac Utility</span>
+                  </div>
                 </div>
               </div>
 
-              <!-- Right Notch Wing -->
-              <div class="notch-wing wing-right" id="wing-right">
-                <div class="wing-metric">
-                  <span class="metric-label">RAM</span>
-                  <div class="metric-bar-bg"><div class="metric-bar-fill fill-ram" style="width: 64%;"></div></div>
-                  <span class="metric-val">18.4G</span>
-                </div>
+              <div class="platform-spec-pills">
+                <span class="spec-pill"><strong style="color: #0071e3;">Engine:</strong> Swift 6 & SwiftUI</span>
+                <span class="spec-pill"><strong style="color: #00e5ff;">Graphics:</strong> Metal 3 (120Hz ProMotion)</span>
+                <span class="spec-pill"><strong style="color: #10b981;">Interface:</strong> MacBook Pro Notch HUD</span>
+                <span class="spec-pill"><strong style="color: #8b5cf6;">3D Spatial:</strong> SceneKit Multi-Device Orbit</span>
+                <span class="spec-pill"><strong>Privacy:</strong> 100% Sandboxed Local</span>
               </div>
 
-              <!-- Expanded Island HUD (Mode Dependent) -->
-              <div class="island-hud-content" id="island-hud-content">
-                <div class="hud-mode-view mode-minimal" id="mode-view-minimal">
-                  <span class="hud-icon-pulse">✦</span>
-                  <span class="hud-text-track">LiquidDynamo Active · 120Hz Metal</span>
+              <div class="platform-card-footer">
+                <div class="get-button-group">
+                  <a class="btn-get" href="/download/dynamo" download data-gh-download="dynamo">GET</a>
+                  <span class="btn-get-iap">Universal DMG · Free</span>
                 </div>
-
-                <div class="hud-mode-view mode-wings" id="mode-view-wings" style="display: none;">
-                  <div class="hud-grid-metrics">
-                    <div class="hud-metric-pill">
-                      <span class="hud-pill-name">CPU Freq</span>
-                      <span class="hud-pill-val">3.49 GHz (M3 Max)</span>
-                    </div>
-                    <div class="hud-metric-pill">
-                      <span class="hud-pill-name">Thermal State</span>
-                      <span class="hud-pill-val" style="color: #10b981;">Nominal · 42°C</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="hud-mode-view mode-universe" id="mode-view-universe" style="display: none;">
-                  <div class="universe-hud-3d">
-                    <span class="orbit-badge">SceneKit 3D Engine Active</span>
-                    <span class="orbit-sub">MacBook Pro 16" · iPhone 16 Pro Max · AirPods Max</span>
-                  </div>
-                </div>
-
-                <div class="hud-mode-view mode-network" id="mode-view-network" style="display: none;">
-                  <div class="network-bonding-hud">
-                    <div class="net-row">
-                      <span class="net-type">Wi-Fi 6E (5GHz):</span>
-                      <span class="net-speed">482 Mbps ↓</span>
-                    </div>
-                    <div class="net-row">
-                      <span class="net-type">5G Cellular Bridge:</span>
-                      <span class="net-speed">124 Mbps ↑</span>
-                    </div>
-                  </div>
-                </div>
+                <a href="/dynamo.html" class="platform-info-link">Full App Info & Screenshots →</a>
               </div>
             </div>
+          </article>
+        </div>
+      </section>
 
-            <!-- Simulator Control Cockpit -->
-            <div class="simulator-cockpit">
-              <span class="cockpit-label">Simulator Mode:</span>
-              <div class="cockpit-btn-group">
-                <button type="button" class="cockpit-btn active" data-mode="minimal">Minimal Pill</button>
-                <button type="button" class="cockpit-btn" data-mode="wings">Hardware Wings</button>
-                <button type="button" class="cockpit-btn" data-mode="universe">3D Universe</button>
-                <button type="button" class="cockpit-btn" data-mode="network">Network Bond</button>
+      <!-- Platform 2: CLI & Developer Agent Runtimes -->
+      <section class="store-shelf platform-shelf" id="platform-cli" data-tab-section="discover platform-cli" data-platform-group="cli" data-type-group="devtools">
+        <div class="store-shelf-head">
+          <div>
+            <div class="shelf-badge-row">
+              <span class="platform-tag cli">⌨️ CLI & Developer Agent Runtime</span>
+              <span class="architecture-tag">Node.js 18+ · macOS Caffeinate Leases · Linux</span>
+            </div>
+            <h2 class="shelf-title">CLI & Developer Agent Runtimes</h2>
+            <p style="color: var(--muted); font-size: 0.9rem; margin-top: 2px;">Model Context Protocol (MCP) servers, background daemons, and terminal assistants</p>
+          </div>
+          <a href="/agent-guard.html" class="shelf-see-all">View Agent Catalog →</a>
+        </div>
+
+        <div class="platform-showcase-grid">
+          <article class="platform-card" data-store-app="guard" data-app-url="/agent-guard.html" data-store-keywords="agent guard ai supervisor mcp claude gemini cursor keep-awake nodejs terminal cli">
+            <div class="platform-card-main">
+              <div class="platform-card-header">
+                <a href="/agent-guard.html" class="platform-icon-wrap">
+                  <img class="platform-app-icon" src="/assets/agent-guard/logo.svg" alt="Agent Guard" width="64" height="64" decoding="async">
+                </a>
+                <div class="platform-meta">
+                  <div class="platform-eyebrow emerald">TERMINAL / MCP SERVER · NODE 18+</div>
+                  <h3 class="platform-app-title"><a href="/agent-guard.html" class="platform-title-link">Agent Guard</a></h3>
+                  <p class="platform-app-tagline">Autonomous LLM Coding Supervisor, Atomic Task Checkpoints & Sleep Prevention Leases</p>
+                  <div class="chart-rating-row" style="margin-top: 4px;">
+                    <span class="star-rating">★★★★★</span>
+                    <span>5.0 (98 ratings)</span>
+                    <span>·</span>
+                    <span class="category-badge">Developer Tools</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="platform-spec-pills">
+                <span class="spec-pill"><strong style="color: #10b981;">Protocol:</strong> Model Context Protocol (MCP)</span>
+                <span class="spec-pill"><strong style="color: #0071e3;">Keep-Awake:</strong> Native caffeinate lease</span>
+                <span class="spec-pill"><strong style="color: #f59e0b;">Safety:</strong> Atomic DAG Rollback</span>
+                <span class="spec-pill"><strong style="color: #8b5cf6;">Ecosystem:</strong> Claude Code, Cursor & Gemini</span>
+                <span class="spec-pill"><strong>Runtime:</strong> Zero-dependency Node.js CLI</span>
+              </div>
+
+              <!-- Quick Terminal Run Box -->
+              <div class="quick-terminal-box">
+                <span class="term-prefix">$</span>
+                <code class="term-code">npx -y @agent-guard/mcp --project-path .</code>
+                <span class="term-tag">Instant Launch</span>
+              </div>
+
+              <div class="platform-card-footer">
+                <div class="get-button-group">
+                  <a class="btn-get" href="/download/guard" data-gh-download="guard">GET</a>
+                  <span class="btn-get-iap">NPM / CLI · Free</span>
+                </div>
+                <a href="/agent-guard.html" class="platform-info-link">Full App Info & Documentation →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- SECTION GROUP: BROWSE BY TYPE / CATEGORY   -->
+    <!-- ========================================== -->
+    <div id="category-sections">
+
+      <!-- Category 1: Mac System Utilities & Hardware -->
+      <section class="store-shelf category-shelf" id="type-utilities" data-tab-section="discover type-utilities" data-type-group="utilities" data-platform-group="macos">
+        <div class="store-shelf-head">
+          <div>
+            <div class="shelf-badge-row">
+              <span class="category-pill-tag utilities">🚀 System Utilities & Hardware</span>
+              <span class="architecture-tag">Liquid Glass Physics</span>
+            </div>
+            <h2 class="shelf-title">Mac System Utilities & Hardware Enhancement</h2>
+            <p style="color: var(--muted); font-size: 0.9rem; margin-top: 2px;">Interactive hardware extensions, dynamic notch wings, and zero-telemetry system monitors</p>
+          </div>
+          <a href="/dynamo.html" class="shelf-see-all">LiquidDynamo Details →</a>
+        </div>
+
+        <!-- Live Interactive Liquid Island Simulator (Test Flight) -->
+        <div class="interactive-island-container" style="margin-top: 14px;">
+          <div class="macbook-frame">
+            <div class="macbook-screen">
+              <!-- Simulated Notch -->
+              <div class="simulated-notch" id="simulated-notch">
+                <div class="notch-hardware">
+                  <span class="camera-lens"></span>
+                  <span class="camera-indicator"></span>
+                </div>
+                
+                <!-- Left Notch Wing -->
+                <div class="notch-wing wing-left" id="wing-left">
+                  <div class="wing-metric">
+                    <span class="metric-label">CPU</span>
+                    <div class="metric-bar-bg"><div class="metric-bar-fill" style="width: 38%;"></div></div>
+                    <span class="metric-val">38%</span>
+                  </div>
+                </div>
+
+                <!-- Right Notch Wing -->
+                <div class="notch-wing wing-right" id="wing-right">
+                  <div class="wing-metric">
+                    <span class="metric-label">RAM</span>
+                    <div class="metric-bar-bg"><div class="metric-bar-fill fill-ram" style="width: 64%;"></div></div>
+                    <span class="metric-val">18.4G</span>
+                  </div>
+                </div>
+
+                <!-- Expanded Island HUD (Mode Dependent) -->
+                <div class="island-hud-content" id="island-hud-content">
+                  <div class="hud-mode-view mode-minimal" id="mode-view-minimal">
+                    <span class="hud-icon-pulse">✦</span>
+                    <span class="hud-text-track">LiquidDynamo Active · 120Hz Metal</span>
+                  </div>
+
+                  <div class="hud-mode-view mode-wings" id="mode-view-wings" style="display: none;">
+                    <div class="hud-grid-metrics">
+                      <div class="hud-metric-pill">
+                        <span class="hud-pill-name">CPU Freq</span>
+                        <span class="hud-pill-val">3.49 GHz (M3 Max)</span>
+                      </div>
+                      <div class="hud-metric-pill">
+                        <span class="hud-pill-name">Thermal State</span>
+                        <span class="hud-pill-val" style="color: #10b981;">Nominal · 42°C</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="hud-mode-view mode-universe" id="mode-view-universe" style="display: none;">
+                    <div class="universe-hud-3d">
+                      <span class="orbit-badge">SceneKit 3D Engine Active</span>
+                      <span class="orbit-sub">MacBook Pro 16" · iPhone 16 Pro Max · AirPods Max</span>
+                    </div>
+                  </div>
+
+                  <div class="hud-mode-view mode-network" id="mode-view-network" style="display: none;">
+                    <div class="network-bonding-hud">
+                      <div class="net-row">
+                        <span class="net-type">Wi-Fi 6E (5GHz):</span>
+                        <span class="net-speed">482 Mbps ↓</span>
+                      </div>
+                      <div class="net-row">
+                        <span class="net-type">5G Cellular Bridge:</span>
+                        <span class="net-speed">124 Mbps ↑</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Simulator Control Cockpit -->
+              <div class="simulator-cockpit">
+                <span class="cockpit-label">Simulator Mode:</span>
+                <div class="cockpit-btn-group">
+                  <button type="button" class="cockpit-btn active" data-mode="minimal">Minimal Pill</button>
+                  <button type="button" class="cockpit-btn" data-mode="wings">Hardware Wings</button>
+                  <button type="button" class="cockpit-btn" data-mode="universe">3D Universe</button>
+                  <button type="button" class="cockpit-btn" data-mode="network">Network Bond</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </section>
+
+      <!-- Category 2: Developer Tools & AI Engines -->
+      <section class="store-shelf category-shelf" id="type-devtools" data-tab-section="discover type-devtools" data-type-group="devtools" data-platform-group="cli">
+        <div class="store-shelf-head">
+          <div>
+            <div class="shelf-badge-row">
+              <span class="category-pill-tag devtools">🛡️ Developer Tools & AI Engines</span>
+              <span class="architecture-tag">Autonomous MCP Protocol</span>
+            </div>
+            <h2 class="shelf-title">Developer Tools & Autonomous AI Engines</h2>
+            <p style="color: var(--muted); font-size: 0.9rem; margin-top: 2px;">Enforce strict quality gates, automate DAG step checkpoints, and guarantee uninterrupted compilation</p>
+          </div>
+          <a href="/agent-guard.html" class="shelf-see-all">Agent Guard Details →</a>
+        </div>
+
+        <!-- Agent Guard Interactive Tool Suite Showcase -->
+        <div class="devtools-suite-card" data-app-url="/agent-guard.html">
+          <div class="devtools-suite-header">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <img src="/assets/agent-guard/logo.svg" alt="Agent Guard" width="48" height="48" style="border-radius: 12px; background: #0f172a; padding: 6px;">
+              <div>
+                <h3 style="font-size: 1.15rem; font-weight: 700; margin: 0;"><a href="/agent-guard.html" class="platform-title-link">Agent Guard MCP Server Suite</a></h3>
+                <p style="color: var(--muted); font-size: 0.88rem; margin-top: 2px;">Full-spectrum governance for Claude Code, Cursor, and Gemini agents</p>
+              </div>
+            </div>
+            <a class="btn-get" href="/download/guard" data-gh-download="guard">GET</a>
+          </div>
+
+          <div class="devtools-tools-grid">
+            <div class="tool-capsule">
+              <div class="tool-capsule-head">
+                <span class="tool-badge-dot emerald"></span>
+                <span class="tool-name">task_checkpoint</span>
+              </div>
+              <p class="tool-desc">Enforces proof-backed DAG checkpoints and persists atomic ledger state before proceeding.</p>
+            </div>
+
+            <div class="tool-capsule">
+              <div class="tool-capsule-head">
+                <span class="tool-badge-dot blue"></span>
+                <span class="tool-name">keep_awake</span>
+              </div>
+              <p class="tool-desc">Acquires native macOS caffeinate power assertion leases to block sleep during multi-hour builds.</p>
+            </div>
+
+            <div class="tool-capsule">
+              <div class="tool-capsule-head">
+                <span class="tool-badge-dot purple"></span>
+                <span class="tool-name">repo_brief</span>
+              </div>
+              <p class="tool-desc">Pre-computes token-compressed AST codebase briefs and architecture diagrams for instant ingestion.</p>
+            </div>
+
+            <div class="tool-capsule">
+              <div class="tool-capsule-head">
+                <span class="tool-badge-dot amber"></span>
+                <span class="tool-name">account_switcher</span>
+              </div>
+              <p class="tool-desc">Monitors token limits in real time and automatically swaps accounts when quota drops below 1%.</p>
+            </div>
+          </div>
+
+          <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--store-border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+            <span style="font-size: 0.84rem; color: var(--muted);">Protocol: Model Context Protocol (v2024-11-05) · Node.js 18+ · Zero Third-party Telemetry</span>
+            <a href="/agent-guard.html" style="font-size: 0.86rem; color: var(--store-blue); font-weight: 600; text-decoration: none;">View Tool API Reference →</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- SECTION: PLATFORM & TYPE COMPATIBILITY     -->
+    <!-- ========================================== -->
+    <section class="store-shelf" id="compatibility-matrix" data-tab-section="discover platform-macos platform-cli type-utilities type-devtools">
+      <div class="store-shelf-head">
+        <div>
+          <h2 class="shelf-title">Platform & Category Specifications</h2>
+          <p style="color: var(--muted); font-size: 0.9rem; margin-top: 2px;">Comprehensive comparison of system architecture, runtimes, and category characteristics</p>
+        </div>
+        <span class="architecture-tag">Verified macOS Sonoma & Sequoia</span>
+      </div>
+
+      <div class="spec-table-wrapper">
+        <table class="store-spec-table">
+          <thead>
+            <tr>
+              <th>Application</th>
+              <th>Platform</th>
+              <th>Type / Category</th>
+              <th>Technology Stack</th>
+              <th>Hardware & System Requirements</th>
+              <th>Direct Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="spec-row" data-app-url="/dynamo.html">
+              <td>
+                <div class="spec-app-cell">
+                  <img src="/assets/dynamo/logo.png" alt="" width="36" height="36" style="border-radius: 8px;">
+                  <div>
+                    <a href="/dynamo.html" class="spec-app-name">LiquidDynamo</a>
+                    <span class="spec-app-sub">v2.1.0 Universal</span>
+                  </div>
+                </div>
+              </td>
+              <td><span class="platform-tag macos"> macOS Native</span></td>
+              <td><span class="category-pill-tag utilities">🚀 System Utility</span></td>
+              <td>Swift 6, SwiftUI, Metal 3, SceneKit</td>
+              <td>macOS 14.0+ · MacBook Pro with Camera Notch (Apple Silicon & Intel)</td>
+              <td>
+                <div style="display: flex; gap: 8px; align-items: center;">
+                  <a class="btn-get" href="/download/dynamo" download data-gh-download="dynamo">GET</a>
+                  <a href="/dynamo.html" class="spec-view-link">Info</a>
+                </div>
+              </td>
+            </tr>
+            <tr class="spec-row" data-app-url="/agent-guard.html">
+              <td>
+                <div class="spec-app-cell">
+                  <img src="/assets/agent-guard/logo.svg" alt="" width="36" height="36" style="border-radius: 8px; background: #0f172a; padding: 4px;">
+                  <div>
+                    <a href="/agent-guard.html" class="spec-app-name">Agent Guard</a>
+                    <span class="spec-app-sub">v1.2.0 MCP</span>
+                  </div>
+                </div>
+              </td>
+              <td><span class="platform-tag cli">⌨️ CLI & Agents</span></td>
+              <td><span class="category-pill-tag devtools">🛡️ Developer Tools</span></td>
+              <td>TypeScript, Node.js 18+, Model Context Protocol</td>
+              <td>macOS (Caffeinate daemon), Linux, Terminal with Claude / Cursor / Gemini</td>
+              <td>
+                <div style="display: flex; gap: 8px; align-items: center;">
+                  <a class="btn-get" href="/download/guard" data-gh-download="guard">GET</a>
+                  <a href="/agent-guard.html" class="spec-view-link">Info</a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
